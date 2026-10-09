@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What's New · 9 Oct 2026 (run c) · Biggles fleet scout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f6f3;--surface:#fff;--ink:#1a1a1a;--muted:#5c5c5c;--line:rgba(0,0,0,.08);--accent:#c45c26;--ok:#2f7d4f;--warn:#a86b00;--bad:#b3261e}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.06rem/1.62 "Source Serif 4",Georgia,serif}
+.top{font:500 .85rem/1.4 "IBM Plex Sans",system-ui,sans-serif;color:var(--muted);border-bottom:1px solid var(--line);padding:.7rem 1.1rem;background:var(--surface)}
+.top b{color:var(--ink)}
+main{max-width:44rem;margin:0 auto;padding:1.4rem 1.1rem 3rem}
+h1{font:600 1.75rem/1.25 "IBM Plex Sans",system-ui,sans-serif;margin:.6rem 0 .5rem}
+h2{font:600 1.22rem/1.3 "IBM Plex Sans",system-ui,sans-serif;margin:2.2rem 0 .6rem;padding-top:.6rem;border-top:1px solid var(--line)}
+h3{font:600 1.05rem/1.35 "IBM Plex Sans",system-ui,sans-serif;margin:1.3rem 0 .4rem}
+p{margin:.55rem 0}
+a{color:var(--accent);text-underline-offset:2px}
+.thesis{font-size:1.12rem;color:#333}
+.badges{display:flex;flex-wrap:wrap;gap:.4rem;margin:.8rem 0}
+.badge{font:500 .78rem/1 "IBM Plex Sans",sans-serif;padding:.4rem .6rem;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(8.5rem,1fr));gap:.6rem;margin:1rem 0}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:.7rem .8rem}
+.kpi .n{font:600 1.5rem/1.1 "IBM Plex Sans",sans-serif}
+.kpi .l{font:400 .8rem/1.3 "IBM Plex Sans",sans-serif;color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem;margin:.8rem 0}
+.tag{display:inline-block;font:600 .7rem/1 "IBM Plex Sans",sans-serif;letter-spacing:.04em;padding:.3rem .45rem;border-radius:4px;margin-right:.35rem;vertical-align:2px}
+.t-off{background:#e7f3ec;color:var(--ok)}.t-com{background:#fdf1dc;color:var(--warn)}.t-act{background:#fbe6e3;color:var(--bad)}.t-pick{background:#f6e7de;color:var(--accent)}.t-fyi{background:#eceff3;color:#3d4b5c}
+.q{border-left:3px solid var(--accent);padding:.2rem 0 .2rem .8rem;color:#333;margin:.6rem 0;font-style:italic}
+.gate{font:400 .95rem/1.55 "IBM Plex Sans",sans-serif}
+.gate b{font-weight:600}
+table{width:100%;border-collapse:collapse;font:400 .9rem/1.45 "IBM Plex Sans",sans-serif;background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+th,td{text-align:left;vertical-align:top;padding:.5rem .6rem;border-bottom:1px solid var(--line)}
+th{background:#f1efe9;font-weight:600}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:.6rem 0}
+code{font:400 .86em/1.4 ui-monospace,Menlo,Consolas,monospace;background:#efede7;padding:.1rem .3rem;border-radius:4px;word-break:break-word}
+pre{background:#1f1f1f;color:#f2f1ec;padding:.7rem .8rem;border-radius:8px;overflow-x:auto;font:400 .85rem/1.45 ui-monospace,Menlo,Consolas,monospace}
+.muted{color:var(--muted)}
+ul{padding-left:1.2rem}li{margin:.3rem 0}
+.abs{font-weight:600;color:var(--bad)}.pres{font-weight:600;color:var(--ok)}
+footer{font:400 .82rem/1.5 "IBM Plex Sans",sans-serif;color:var(--muted);border-top:1px solid var(--line);margin-top:2.5rem;padding-top:1rem}
+</style>
+</head>
+<body>
+<div class="top"><b>What's New</b> · Biggles fleet scout · run c · Fri 9 Oct 2026, 2:30–3:10pm AWST · window 2–9 Oct · new-since-1:05pm focus</div>
+<main>
+
+<h1>What’s new, 9 Oct 2026 (run c): one test-only pick, one security check, three new deals</h1>
+<p class="thesis">NeuDecide is a 43 MB model that turns a spoken command straight into an app action, with no transcript step. It names the exact Whistle → Needle 3 cascade that earlier boards shelved for the phone factories, and says it beats it. That is the vendor's claim, so this weekend's step is a free browser test, not an install. Separately, a run of MCP SSRF fixes (Google, JPMorgan) is worth a 15-minute check of any MCP server that fetches URLs.</p>
+<div class="badges">
+<span class="badge">Snapshot static as of 3 Oct 2026</span>
+<span class="badge">Machines not probed</span>
+<span class="badge">De-duped vs 7 Oct a/b/c, 8 Oct a/b, 9 Oct a/b</span>
+<span class="badge">Reddit missed</span>
+</div>
+<div class="kpis">
+<div class="kpi"><div class="n">1</div><div class="l">pick (test-only until 14 Oct)</div></div>
+<div class="kpi"><div class="n">15</div><div class="l">candidates weighed</div></div>
+<div class="kpi"><div class="n">13/13</div><div class="l">buckets searched</div></div>
+<div class="kpi"><div class="n">3</div><div class="l">new official deals</div></div>
+</div>
+
+<h2>Do / Ignore</h2>
+<h3>Do</h3>
+<div class="card"><span class="tag t-act">CHECK · 15 MIN</span><b>Check any MCP server that fetches a URL for an SSRF guard.</b> SSRF (server-side request forgery) means a tool fetches whatever address the agent passes it, including internal ones. One researcher got the same SSRF bug fixed in MCP servers from Google, JPMorgan, Weaviate, France's DINUM and Tangerang's government. Google's MCP Toolbox for Databases is <code>CVE-2026-14540</code>, rated 8.0, in versions 0.3.0 to 1.4.0. He runs 30+ MCP servers, including crawling ones. For any server he wrote that takes a URL, check that it resolves the hostname and blocks private and metadata IP ranges <em>before</em> fetching. Don't rely on just rejecting literal IPs, because that is the exact bug in the Tangerang server. <a href="https://thenextweb.com/news/mcp-flaw-ssrf-google-jpmorgan-dinum-protocol-pivoting">The Next Web, 6 Oct</a></div>
+<div class="card"><span class="tag t-pick">PICK · TEST ONLY</span><b>Try NeuDecide in the browser demo this weekend.</b> Don't install it. Both PyPI releases are under 7 days old, so the install waits until Wed 14 Oct, 11:49pm AWST. <a href="#pick1">Details</a></div>
+<div class="card"><span class="tag t-off">OFFICIAL</span><b>GMI Cloud: a free week of Qwen3.8-Max, Qwen3.8-Flash and Wan3.0.</b> Qwen posted at 11:36am AWST today that it “is live”. New users need a $10 balance, and GMI says the $10 “stays in your balance”. GMI also replied that “its ending by 11 oct”, so the window is about 2 days. These are cloud models, so keep dental and client data out. <a href="https://x.com/Alibaba_Qwen/status/2108401307577090259">Qwen post</a> · <a href="https://x.com/gmi_cloud/status/2108263009248493656">GMI end-date reply</a></div>
+<p class="muted">Still live from earlier boards (not repeated here): tensorlake worm check, the Claude Code &lt;2.1.129 CVE check, Claude Code 2.1.295 fail-closed hooks (pinnable 16 Oct), Kandinsky 6 Lite (node pinnable 13/15 Oct), Docker $250 sandbox credit, Vercel Glyph Cluster, Menso first 100, Nace $25, ElevenLabs v4 promo to 12 Oct, Polymarket v1 retirement 24 Oct. Claude Startups is still paused. npm still shows <code>stable</code> 2.1.286 and <code>latest</code> 2.1.295, so there's no new Claude Code release since this morning.</p>
+<h3>Ignore</h3>
+<ul>
+<li><a href="https://github.com/microsoft/mxc">Microsoft MXC SDK 1.0</a>: a real sandbox SDK, but it has to be built into an app. See near-misses.</li>
+<li><a href="https://github.com/microsoft/vscode/issues/340651">VS Code switching chats back to Copilot</a> (11:30am AWST today). This is a real data-leak risk for VS Code users, but VS Code isn't in the snapshot.</li>
+<li><a href="https://huggingface.co/nvidia/Nemotron-Labs-Audex-30B-A3B">Nemotron-Labs-Audex-30B-A3B</a>: reshared today as “unveiled”, but the Hugging Face repo was created on 6 Jul 2026, so it isn't new.</li>
+<li>Referral-link “free credits” posts on X (Pollo AI, uncensored-AI links and similar). These are spam, not deals.</li>
+</ul>
+
+<h2>As of</h2>
+<p>Fri 9 Oct 2026, 2:30–3:10pm AWST. Search window: 2–9 Oct 2026. I preferred items new since the afternoon board (about 1:05pm AWST). Scope is the whole fleet, with no focus given. <b>The fleet snapshot is static (dated 3 Oct 2026). I did not probe his machines.</b> Nothing here is installed. I only recommend.</p>
+
+<h2>Verdict</h2>
+<p>Test NeuDecide first, in the browser, because it targets the factories' known gap: paid apps with no on-device AI. It replaces the two-model voice cascade the 5–7 Oct boards shelved with one 43 MB model. The accuracy win is only the vendor's claim, which is why this weekend is a demo and not an install. The rest waits. MXC needs code changes in his orchestrator, d1 sits on the Jev decision-model shelf, and Audex isn't new.</p>
+
+<h2>Picks</h2>
+<div class="tw"><table>
+<tr><th>#</th><th>Pick (primary source)</th><th>What it does for him</th><th>Cost to try</th></tr>
+<tr><td>1</td><td><a href="https://github.com/neuphonic/neudecide">NeuDecide</a> (Neuphonic, blog 8 Oct, Apache-2.0)</td><td>Turns a spoken command plus a list of up to about 10 app actions into one action call, offline on CPU. Candidate for voice control in the paid iOS and Android apps.</td><td>Free. The demo takes about 20 min in a browser. The pip install waits until 14–15 Oct (7-day rule).</td></tr>
+</table></div>
+
+<h3 id="pick1">1 · NeuDecide (bucket 5 on-device + 7 audio)</h3>
+<p>Primary: <a href="https://github.com/neuphonic/neudecide">README</a> · <a href="https://www.neuphonic.com/blog/neudecide">Neuphonic blog (08/10/2026)</a> · <a href="https://huggingface.co/neuphonic/neudecide">weights (HF, Apache-2.0)</a> · <a href="https://huggingface.co/spaces/neuphonic/neudecide">demo Space</a> · <a href="https://pypi.org/project/neudecide/">PyPI</a></p>
+<p><b>What it is.</b> It's a tiny “voice-action” model. You give it audio and a list of your app's actions, written as JSON schemas. It returns which action to run and with which arguments. It never writes out the words. Everyday comparison: a normal voice assistant is a stenographer who hands notes to a clerk. NeuDecide is one clerk who just listens and presses the right button.</p>
+<p class="q">“NeuDecide converts speech directly into function calls. It's 43 MB, can run on a single thread via ONNX Runtime, and needs no GPU or internet connection once downloaded.” (README)</p>
+<p><b>Must-beat.</b> For the job of voice commands inside the paid iOS and Android apps, he runs nothing on device today (the snapshot's known gap). The nearest shelf candidate is the Whistle → Needle cascade from the 5–7 Oct boards. NeuDecide beats that structurally: one model (three ONNX graphs, 55.5M parameters, 43 MB) replaces two models (176M parameters, 52 MB) and drops the transcript step. The accuracy gap is <b>the vendor's claim</b>, on SLURP spoken home-assistant commands with 10 tools. The comparison set is two Parakeet cascades, Whistle → Needle 3, and Voxtral Mini 3B:</p>
+<p class="q">README table: “SLURP | Exact match | <b>37.5%</b> | 7.1% | 1.9% | 6.9%” (NeuDecide | Whistle → Needle 3 | Parakeet 660M → FunctionGemma | Voxtral Mini 3B)</p>
+<div class="gate">
+<p><b>Gate 1 · existence: PASS.</b> I checked the snapshot. The factories have no on-device AI, which is a named known gap. The earlier picks on that shelf cover chat (Edge0), embeddings (EmbeddingGemma 2), a runtime (expo-local-llm) and speech-to-text (Whistle). None of them maps speech to an action in one model. I didn't compare it to Whisper on the Strix box, because that's a server job.</p>
+<p><b>Gate 2 · fit: Windows desktop for the desk test, then a factory test phone.</b> It runs on CPU only. Resident GPU memory: 0 GB / 24 GB = 0. System RAM: the vendor measured a peak of 146–174 MB. On the desktop that's 0.174 GB / 32 GB = 0.005. The vendor measured on a Samsung S24+ (82 ms to call, 267 ms to load), not on his phones. His test phones aren't in the snapshot.</p>
+<p><b>Gate 3 · silicon.</b> AMD, ROCm, Strix, Vulkan, unified memory, Linux, RTX 4090, RTX 2070 Super and RTX 5070 Ti are all <span class="abs">ABSENT</span> from the README. NVIDIA appears only as the credit for the speech encoder. iOS and Android are <span class="abs">ABSENT</span> as SDKs. The README lists only a Python package (Python 3.10–3.13). Measured on his gear: Not proven here.</p>
+</div>
+<p><b>Honest limit.</b> There's no iOS or Android SDK. To use it in an app, the factory would have to run the three ONNX graphs, the tokenizer and the decode loop itself, and that isn't documented. It's English only, takes at most 30 s of audio, and works best with 10 tools or fewer. In the vendor's own test, it produced a <code>set_timer</code> call from 30 s of low-level noise. It has no confidence score, so it needs a voice-activity gate or a “no action” tool in front. On SNIPS, where arguments are free-form names, transcript cascades still fill arguments better. Every accuracy number is the vendor's.</p>
+<p><b>Try this weekend (Windows desktop, browser only).</b> First step, about 20 min: open the <a href="https://huggingface.co/spaces/neuphonic/neudecide">demo Space</a>. I confirmed it returns HTTP 200 but didn't use it. Pick a device, then say 10 commands, including 3 with a TV or fan running. <b>Done signal:</b> at least 8 of 10 clean commands give the right action and the right argument. <b>Stop rule:</b> stop if it fires an action on background noise more than once, or if fewer than 7 of 10 are right. Then it stays shelved.</p>
+<p><b>Install (wait for the 7-day rule).</b> The page prints:</p>
+<pre>pip install neudecide</pre>
+<p>Both releases are under 7 days old. <code>0.1.0a1</code> went up 7 Oct, 11:49pm AWST, and <code>0.1.0</code> went up 8 Oct, 6:35pm AWST. So the pinned line <code>pip install neudecide==0.1.0a1</code> works from <b>Wed 14 Oct, 11:49pm AWST</b>, and <code>pip install neudecide==0.1.0</code> works from <b>Thu 15 Oct, 6:35pm AWST</b>. The weights repo was created 6 Oct, 5:17pm AWST, and last changed 8 Oct, 6:59pm AWST, so the weights are young too.</p>
+
+<h2>Newsdesk: five lanes</h2>
+<h3>9 · Model releases (cloud and API)</h3>
+<div class="card"><b>Claude Dashboards and Claude Motion (beta), and Docs, Slides and Design out of beta.</b> @claudeai posted this on 9 Oct, 3:01am AWST. Dashboards connects a data platform or CRM and keeps a chart current. “Each chart shows the query behind it.” It's on paid plans. Motion turns a report into a short animation written as code, with “no generated footage”, and exports MP4. It's on Team and Enterprise only. The standalone claude.ai/design site closes 14 Dec. <a href="https://claude.com/resources/articles/dashboards-and-motion">Claude announcement</a></div>
+<h3>10 · Build stories</h3>
+<div class="card"><b>A Claude Code team member built a daily AI “new tab” homepage on Claude Managed Agents.</b> It's generated every day from sites he reads. “using Sonnet 5.5 each run costs ~$0.75.” The repo (a Chrome extension) went public at 5:44am AWST today. It's a direct use for the Max-plan API credit on the 8 Oct board. <a href="https://x.com/trq212/status/2108301670451163390">@trq212 thread</a> · <a href="https://x.com/trq212/status/2108312534222778407">repo post</a></div>
+<h3>11 · Deals (new to these boards)</h3>
+<div class="card"><span class="tag t-off">OFFICIAL</span><b>GMI Cloud free week of Qwen3.8-Max, Qwen3.8-Flash and Wan3.0.</b> You need a $10 balance, which stays as credit. GMI's reply says it ends 11 Oct. A user pointed out that the dates are confusing (“7 more days” posted 7 Oct). RuntimeWire, citing GMI's campaign page, also reports enterprise credits of up to $10,000 per organisation through 5 Nov. That figure is secondary, and I didn't open GMI's page. <a href="https://x.com/Alibaba_Qwen/status/2108401307577090259">Qwen post</a> · <a href="https://runtimewire.com/article/gmi-cloud-alex-yeh-qwen-free-access-promotion">RuntimeWire</a></div>
+<div class="card"><span class="tag t-off">OFFICIAL</span><b>Claude Docs, Slides and Design are now on every plan, including Free</b> (9 Oct, 3:01am AWST). Only useful if a factory or wiki job wants editable decks or designs without a paid seat. <a href="https://claude.com/resources/articles/dashboards-and-motion">Announcement</a></div>
+<div class="card"><span class="tag t-off">OFFICIAL</span><b>Liquid AI <code>d1:free</code>.</b> Liquid's own docs use this free text-only model ID in every example. Paid <code>d1</code> (with vision, launched 5 Oct) is “$0.04 per million input tokens” with no output charge. The docs I read state no rate limit for the free tier. It's a decision model like Jev, which is on the hold list, so it's FYI only. <a href="https://docs.liquid.ai/.well-known/skills/decision-model/skill.md">Liquid docs skill</a> · <a href="https://www.liquid.ai/blog/d1-decision-model">d1 blog</a></div>
+<p class="muted">First-N and launch-week hunt: nothing new since this afternoon. Hark (first 100k) and Menso (first 100) are already on boards. A secondary blog reports a Synthesia Syren first-1,000 credit offer, but it closed 8 Oct. Claude for Open Source (6 months of Max 20x) is an older program, not new.</p>
+<h3>12 · Company announcements</h3>
+<div class="card"><b>Anthropic Cyber Mission and OSS Scanner</b> (9 Oct, 5:04am AWST). OSS Scanner gives opted-in open-source projects “thorough, periodic security scans by our strongest models at no cost”. The reports are model-only, with no human review. Eligibility follows OSS-Fuzz: “critical impact on infrastructure and user security”. His repos almost certainly don't qualify. The useful number is Anthropic's own check: “85 (88%) met the bar” of 97 critical and high findings. <a href="https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source">Anthropic research post</a>. Also today: Arena (the model leaderboard) raised $200M at $3.1B and launched an Alignment Index. <a href="https://texxr.com/1296618/arena-raises-200m-at-3-1b-valuation">TEXXR, citing Bloomberg</a></div>
+<h3>13 · Solo-dev money</h3>
+<div class="card"><b>An MCP server listed in ChatGPT's app directory went from about 7 to 50+ signups a day with no ad spend.</b> MRR went from $38 to $174 in three months, with 12 paying customers. “22 people hit the paywall and none bought.” This is self-reported. It came from an r/SaaS post whose body I couldn't open (Reddit blocked), relayed in an X post at 1:41am AWST today. This is social proof, not evidence. The lesson for his MCP repos: the directory brings users, but the paywall step is where money is lost. <a href="https://x.com/fengfengnew20/status/2108251335246381273">X post</a></div>
+
+<h2>Near-misses</h2>
+<div class="tw"><table>
+<tr><th>Name (link)</th><th>Why it died</th><th>Lost to (owned or shelved)</th></tr>
+<tr><td><a href="https://github.com/microsoft/mxc">Microsoft MXC SDK v1.0.0</a> (release 7 Oct, 1:54pm AWST)</td><td>A policy-driven sandbox for model-written code on Windows, Linux and macOS (Linux default: Bubblewrap). It's an SDK that “builds into your app”, so it means changing his orchestrator. There's no measured beat. npm 1.0.0 can't be pinned until 13 Oct, 2:44pm AWST.</td><td>The agent CLIs he runs, and the Docker sandbox credit (morning board)</td></tr>
+<tr><td><a href="https://www.liquid.ai/blog/d1-decision-model">Liquid d1</a> (5 Oct)</td><td>A decision model with vision, hosted only (open weights “soon”). Its comparisons are the vendor's, against GPT-6.1 Sol and Opus 5.5.</td><td>The Jev/Laya hold list, and Mercury Decide (weighed earlier today)</td></tr>
+<tr><td><a href="https://huggingface.co/nvidia/Nemotron-Labs-Audex-30B-A3B">Nemotron-Labs-Audex-30B-A3B</a></td><td>Not new. The HF repo was created 6 Jul 2026.</td><td>Whisper large-v3 on Strix, Qwen3 speech on the laptop</td></tr>
+<tr><td><a href="https://arcxiv.org/abs/2610.11734">Timer-M1</a> (paper, 8 Oct)</td><td>A general multivariate time-series model. I read the abstract only and found no repo or weights. It isn't a candle model.</td><td>Yug (8 Oct board), Kronos (hold list)</td></tr>
+<tr><td><a href="https://dev.to/gde/making-cross-platform-local-ai-easier-with-llamadart-2l4k">llamadart 0.11</a> (8 Oct)</td><td>A Flutter/Dart local-AI wrapper. It would be another phone runtime, and the snapshot doesn't say the factories use Flutter.</td><td>Edge0, expo-local-llm</td></tr>
+<tr><td><a href="https://tailscale.com/blog/codex-cloud-tailscale">Codex Cloud + Tailscale</a> (6 Oct)</td><td>Cloud Codex VMs can join a tailnet. He uses Cloudflare tunnels, not Tailscale, and it only covers HTTP/HTTPS (no SSH).</td><td>Cloudflare tunnels, local Codex</td></tr>
+<tr><td><a href="https://github.com/microsoft/vscode/issues/340651">VS Code BYO-model reset</a> (9 Oct)</td><td>VS Code isn't in the snapshot</td><td>Claude Code, Codex, OpenCode</td></tr>
+<tr><td><a href="https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source">OSS Scanner</a> as a deal</td><td>Eligibility is limited to critical open-source infrastructure</td><td>Kept as a company item</td></tr>
+</table></div>
+
+<h2>Source ledger</h2>
+<div class="tw"><table>
+<tr><th>Floor</th><th>Result</th></tr>
+<tr><td>≥8 web queries</td><td><b>Met.</b> 24 WebSearch queries returned usable text (two of them site:reddit.com, snippets only), plus 2 HN Algolia queries and npm/PyPI/HF/GitHub registry reads.</td></tr>
+<tr><td>≥2 X queries with post text</td><td><b>Met, through the X MCP.</b> 4 searches returned post text: (1) free credits and first-N offers since 12:30pm AWST, (2) vendor accounts since 8 Oct 8pm AWST, (3) solo revenue since 8 Oct, (4) Qwen/GMI. There were also 2 post lookups by ID. The skill's route (WebSearch <code>site:x.com</code>) returned “No results found”. This is a different route from the one the skill lists.</td></tr>
+<tr><td>≥2 Reddit queries with post text</td><td><b>MISSED.</b> Two site:reddit.com searches (plus one that surfaced the r/SaaS thread) returned titles and snippets only. The curl requests with a browser User-Agent were: <code>www.reddit.com/r/StrixHalo/new/.json</code> 403; <code>r/ClaudeAI/search.json?…t=week</code> 403; <code>r/SaaS/search.json</code> 403; thread <code>.json</code> 403 (×2); <code>api.reddit.com</code> 403; <code>.rss</code> 403. Every <code>old.reddit.com</code> page and <code>.json</code> URL returned 302 to <code>/login/?reason=lor2</code>, then 403. WebFetch got 403 on old.reddit and the www thread (“blocked by network security”), and timed out on <code>.json</code> (×2). No post body came back.</td></tr>
+<tr><td>13 buckets searched once</td><td><b>Met.</b> See the map below.</td></tr>
+<tr><td>≥4 primary pages</td><td><b>Met.</b> Bodies came back for: the Anthropic OSS Scanner post; the claude.com Dashboards/Motion article; the Neuphonic NeuDecide blog; the NeuDecide README (GitHub raw); the MXC README and GitHub releases API; the Liquid d1 blog; Liquid's decision-models docs and docs skill; the Tailscale Codex Cloud blog; the VS Code issue #340651; plus secondary pages (TNW, TEXXR, RuntimeWire). Registry JSON: PyPI neudecide, HF neudecide and Audex, npm claude-code, codex and mxc-sdk.</td></tr>
+<tr><td>≥8 candidates weighed</td><td><b>Met (15).</b> NeuDecide, MXC 1.0, Liquid d1, Audex-30B, Timer-M1, llamadart 0.11, Codex Cloud+Tailscale, the VS Code BYO bug, Claude Dashboards/Motion, OSS Scanner, MCP SSRF / CVE-2026-14540, GMI free week, Arena, the Managed Agents homepage, the MCP-server MRR story.</td></tr>
+<tr><td>5 newsdesk lanes</td><td><b>Met.</b> All five have an item.</td></tr>
+</table></div>
+<h3>Queries (lane · bucket)</h3>
+<div class="tw"><table>
+<tr><th>#</th><th>Query</th><th>Bucket</th><th>Result</th></tr>
+<tr><td>1</td><td>AMD Strix Halo Ryzen AI Max Linux kernel firmware NPU XDNA update October 2026</td><td>1 silicon</td><td>Usable. Only old XDNA issues and guides. Nothing new.</td></tr>
+<tr><td>2</td><td>financial time series foundation model open source release October 2026</td><td>2 trading</td><td>Usable. Yug (covered), Kronos (hold), KiT (covered), Timer-M1 (new paper).</td></tr>
+<tr><td>3</td><td>dental AI radiograph open source model release October 2026</td><td>4 dental</td><td>Usable. ToothXpert, DentalX, RCTE (all covered or old).</td></tr>
+<tr><td>4</td><td>on-device LLM SDK iOS Android new release October 9 2026</td><td>5 on-device</td><td>Usable. ML Drift/LiteRT (covered), llamadart 0.11.</td></tr>
+<tr><td>5</td><td>npm PyPI malicious package supply chain attack AI agent October 9 2026</td><td>8 security</td><td>Usable. tensorlake only (covered).</td></tr>
+<tr><td>6</td><td>new AI model API launch October 9 2026</td><td>9 models</td><td>Usable. Mistral Large 4, Sol Ultrafast, Mellum2.1 (all covered).</td></tr>
+<tr><td>7</td><td>site:reddit.com free credits launch AI developers first users October 2026</td><td>11 deals · Reddit</td><td>Snippets only. Not counted.</td></tr>
+<tr><td>8</td><td>site:reddit.com StrixHalo OR LocalLLaMA new release October 9 2026</td><td>1 · Reddit</td><td>Snippets only (August posts). Not counted.</td></tr>
+<tr><td>9</td><td>Anthropic OSS Scanner Cyber Mission open-source vulnerability scan opt-in no cost</td><td>12 company</td><td>Usable.</td></tr>
+<tr><td>10</td><td>Liquid AI d1 decision model API free tier calibrated probabilities</td><td>9/11</td><td>Usable.</td></tr>
+<tr><td>11</td><td>Claude Docs Slides Design out of beta free plan Claude Dashboards Motion announcement October 2026</td><td>9 models</td><td>Usable.</td></tr>
+<tr><td>12</td><td>"first 1,000" OR "first 500" OR "first 100" users free AI tool launch October 9 2026</td><td>11 deals</td><td>Usable. Hark and Menso (covered), Syren (closed 8 Oct).</td></tr>
+<tr><td>13</td><td>Product Hunt launch October 9 2026 AI developer tool free credits launch offer</td><td>11 deals</td><td>Usable. Nothing new.</td></tr>
+<tr><td>14</td><td>open source speech audio model release October 8 2026 OR October 9 2026 diarization TTS music</td><td>7 audio</td><td>Usable. NeuDecide, Audex, Whistle (covered).</td></tr>
+<tr><td>15</td><td>order book simulator OR backtesting engine OR market data open source release October 2026 Polymarket Kalshi options</td><td>6 desk</td><td>Usable. Undated or held repos. Nothing new.</td></tr>
+<tr><td>16</td><td>indie hacker solo founder MRR revenue AI app October 9 2026</td><td>13 money</td><td>Usable. Mostly covered (AgentaOS, GeFei).</td></tr>
+<tr><td>17</td><td>NVIDIA Nemotron-Labs-Audex-30B-A3B audio model Hugging Face</td><td>7 audio</td><td>Usable. The repo dates from July.</td></tr>
+<tr><td>18</td><td>Neuphonic NeuDecide 43MB audio to tool call model open source</td><td>5/7</td><td>Usable.</td></tr>
+<tr><td>19</td><td>Liquid AI "d1:free" OpenRouter decision model free</td><td>11 deals</td><td>Usable.</td></tr>
+<tr><td>20</td><td>"Claude for OSS" free Claude Max 20x open source maintainers</td><td>11 deals</td><td>Usable. An older program.</td></tr>
+<tr><td>21</td><td>MCP server OR AI agent vulnerability CVE disclosed October 9 2026</td><td>8 security</td><td>Usable. PraisonAI and Langflow (covered), the MCP SSRF wave (new).</td></tr>
+<tr><td>22</td><td>AI startup announcement October 9 2026 launches acquires raises</td><td>12 company</td><td>Usable. Arena.</td></tr>
+<tr><td>23</td><td>MCP server ChatGPT app directory signups MRR $174 …</td><td>13 money</td><td>Usable (r/SaaS snippet only).</td></tr>
+<tr><td>24</td><td>Claude Code OR Codex OR MCP developer tool release October 9 2026 new feature</td><td>3 agent/dev</td><td>Usable. CC 2.1.295 (covered).</td></tr>
+<tr><td>25</td><td>"launch week" OR "launch offer" free credits developers API October 9 2026</td><td>11 deals</td><td>Usable. GMI free week (new).</td></tr>
+<tr><td>26</td><td>site:x.com "free for the first" OR "first 100 users" AI launch October 2026</td><td>X · 11</td><td>No results.</td></tr>
+<tr><td>X1–X4</td><td>X MCP search_posts_all (free credits since 04:30 UTC; vendor accounts; solo MRR; Qwen/GMI)</td><td>11 / 9 / 12 / 13</td><td>Usable. All returned post text.</td></tr>
+<tr><td>HN1–HN2</td><td>Algolia: all stories since 12:30pm AWST 9 Oct; “MRR” stories since 2 Oct</td><td>3 / 10 / 13</td><td>Usable. MXC, VS Code issue, Codex+Tailscale, Claude Dashboards.</td></tr>
+</table></div>
+<p class="muted">Bucket map: 1 silicon (#1, #8) · 2 trading (#2) · 3 agent/dev (#24, HN1, npm) · 4 dental (#3) · 5 on-device (#4, #18) · 6 desk (#15) · 7 audio (#14, #17) · 8 security (#5, #21) · 9 models (#6, #11) · 10 builds (HN1, X2) · 11 deals (#12, #13, #19, #20, #25, X1, X4) · 12 company (#9, #22) · 13 money (#16, #23, X3, HN2).</p>
+<p class="muted">De-duped against the source of the 7 Oct a/b/c, 8 Oct a/b and 9 Oct a/b boards (their Pages URLs were 404 during the repo migration), plus the skill's hold list, valid to 22 Oct.</p>
+
+<h2>Deep dive?</h2>
+<p>Say <b>deep dive 1</b> for a NeuDecide plan for one factory app. It would cover how to define the app's 10 or fewer actions as JSON schemas, a noise gate, and what an ONNX Runtime Mobile port would need. That port isn't documented by Neuphonic.</p>
+
+<footer>Generated Fri 9 Oct 2026, about 3:10pm AWST, by the whats-new scout (run c). The fleet snapshot is static (3 Oct 2026). Nothing was installed or probed. Every number is quoted from the linked page. Vendor figures are labelled as the vendor's claims. One page, no tracking.</footer>
+</main>
+</body>
+</html>
