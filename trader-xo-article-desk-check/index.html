@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trader_XO "Hockey Stick" article: desk check</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f6f3;--surface:#fff;--ink:#1a1a1a;--muted:#5c5c5c;--line:rgba(0,0,0,.08);--accent:#c45c26;--ok:#2f7d4f;--warn:#a87412;--bad:#b0362c}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.07rem/1.65 "Source Serif 4",Georgia,serif}
+.top{font:500 .85rem/1.4 "IBM Plex Sans",sans-serif;color:var(--muted);border-bottom:1px solid var(--line);padding:.8rem 1.2rem;background:var(--surface)}
+main{max-width:46rem;margin:0 auto;padding:1.5rem 1.15rem 4rem}
+h1,h2,h3{font-family:"IBM Plex Sans",sans-serif;line-height:1.25}
+h1{font-size:1.8rem;margin:.6rem 0 .4rem}
+h2{font-size:1.3rem;margin:2.6rem 0 .6rem;padding-top:1rem;border-top:1px solid var(--line)}
+h3{font-size:1.05rem;margin:1.6rem 0 .3rem}
+.lede{font-size:1.15rem;color:#333}
+.badges{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 1rem;font:500 .78rem "IBM Plex Sans",sans-serif}
+.badges span{background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:.2rem .65rem;color:var(--muted)}
+.verdict{background:var(--surface);border-left:4px solid var(--accent);padding:1rem 1.1rem;border-radius:6px;margin:1rem 0;font-size:1.1rem}
+.verdict b{font-family:"IBM Plex Sans",sans-serif}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.7rem;margin:1rem 0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:.85rem .95rem;font:.92rem/1.5 "IBM Plex Sans",sans-serif}
+.card .k{font-size:1.45rem;font-weight:600;display:block}
+.card .l{color:var(--muted)}
+.tw{overflow-x:auto;margin:1rem 0;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font:.86rem/1.45 "IBM Plex Sans",sans-serif}
+th,td{text-align:left;vertical-align:top;padding:.55rem .6rem;border-bottom:1px solid var(--line)}
+th{background:#faf9f6;font-weight:600}
+td{min-width:6rem}
+.pill{display:inline-block;font:600 .74rem "IBM Plex Sans",sans-serif;border-radius:4px;padding:.08rem .4rem;white-space:nowrap}
+.adopt{background:#e5f2ea;color:var(--ok)}.test{background:#f8eed8;color:var(--warn)}.skip{background:#f6e3e1;color:var(--bad)}.cov{background:#eceae4;color:#444}
+.hit{color:var(--ok);font-weight:600}.miss{color:var(--bad);font-weight:600}.unc{color:var(--warn);font-weight:600}
+blockquote{margin:.6rem 0;padding:.3rem 0 .3rem .9rem;border-left:3px solid var(--line);color:#3a3a3a;font-style:italic}
+figure{margin:1.2rem 0}figure img{width:100%;max-width:30rem;border-radius:6px;border:1px solid var(--line);display:block}
+figcaption{font:.82rem "IBM Plex Sans",sans-serif;color:var(--muted);margin-top:.4rem}
+.idea{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1rem 1.1rem;margin:1rem 0}
+.idea h3{margin-top:0}
+.idea dl{margin:.4rem 0 0;font-size:.98rem}.idea dt{font:600 .8rem "IBM Plex Sans",sans-serif;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);margin-top:.7rem}.idea dd{margin:.15rem 0 0}
+.spec{background:#fbf6ee;border:1px dashed #d9b98f;border-radius:8px;padding:1rem 1.1rem}
+.spec .tag{font:600 .75rem "IBM Plex Sans",sans-serif;color:var(--accent);letter-spacing:.06em}
+a{color:#8a3d14;word-break:break-word}
+small,.note{font:.85rem/1.5 "IBM Plex Sans",sans-serif;color:var(--muted)}
+footer{margin-top:3rem;font:.82rem/1.5 "IBM Plex Sans",sans-serif;color:var(--muted)}
+ul{padding-left:1.2rem}li{margin:.25rem 0}
+</style>
+</head>
+<body>
+<div class="top">Desk check · Trader_XO X article · prepared Sat 10 Oct 2026, AWST · research only, no trades placed</div>
+<main>
+<h1>"The Hockey Stick Growth Curve of Trading": worth taking onto the desk?</h1>
+<p class="lede">Trader_XO's X long-form article, posted 28 May 2026 at 20:10 AWST, read in full (about 1,500 words). It has no market calls and no data. It's a trader-development essay, and its four-stage framework is borrowed from a 2016 startup book.</p>
+<div class="badges"><span>Post: x.com/Trader_XO/status/2059970520695664814</span><span>Article id 2059967886953680900</span><span>155,622 views · 860 likes · 916 bookmarks (fetched 10 Oct)</span></div>
+
+<div class="verdict"><b>Verdict: partly.</b> The article has no market edge. Still, three of its process ideas fill real gaps in the desk: (1) a structured journal covering both trades and no-trades, scored by setup and by source; (2) changing the "big daily loss" wake from <i>hunt and take</i> to <i>de-risk and review first</i>; (3) an explicit risk and overtrading budget. Conviction sizing is worth a test. Everything else the desk already covers, or it doesn't apply to an AI agent.</div>
+
+<div class="cards">
+<div class="card"><span class="k">13</span><span class="l">ideas pulled from the article</span></div>
+<div class="card"><span class="k">6 adopt · 3 test · 1 skip</span><span class="l">3 more already covered by the desk</span></div>
+<div class="card"><span class="k">10 / 12</span><span class="l">XO calls that could be graded were right (17 checked, 5 unclear). Sample picked by me, so biased.</span></div>
+<div class="card"><span class="k">42.3%</span><span class="l">third-party CoinVerdict directional hit rate (n=26, mostly backtested) vs a 31.0% benchmark</span></div>
+</div>
+
+<h2>1 · What the article says</h2>
+<p>Title: <b>The Hockey Stick Growth Curve of Trading</b>, subtitled "Why the Path to Elite Trading Is Non-Linear". Source: <a href="https://x.com/Trader_XO/status/2059970520695664814">https://x.com/Trader_XO/status/2059970520695664814</a>, posted 28 May 2026, 20:10 AWST. The tweet itself has no text; it is just the article. I pulled the full body from the article blocks in the public fxtwitter JSON (<a href="https://api.fxtwitter.com/Trader_XO/status/2059970520695664814">https://api.fxtwitter.com/Trader_XO/status/2059970520695664814</a>). The raw text is saved at /workspace/xo-article/article.txt on the box.</p>
+<p><b>Evidence the author gives:</b> his own experience only ("This isn't theory. It's a lived process."). There are no numbers, trades, studies or charts. The images are decorative. The one diagram is captioned <i>"The Hockey Stick Principles, Flatiron Books"</i>, and the stage names (Tinkering, Blade Years, Inflection, Surging Growth) come from Bobby Martin's 2016 startup-growth book (<a href="https://hockeystickprinciples.com/about/">https://hockeystickprinciples.com/about/</a>). That book is about company revenue, not trading.</p>
+<figure><img src="stages.jpg" alt="Diagram of the four stages of hockey stick growth"><figcaption>The only non-decorative image in the article, credited to <i>The Hockey Stick Principles</i> (Flatiron Books). Its stage names are reused as the article's trading stages.</figcaption></figure>
+
+<div class="tw"><table>
+<tr><th>#</th><th>Idea (author's words)</th><th>Author's evidence</th><th>Desk mapping</th><th>Status</th><th>Call</th></tr>
+<tr><td>1</td><td>Growth is non-linear: flat "blade" years, then a break into compounding results.</td><td>Personal experience ("a lived process"); borrowed startup framework.</td><td>No direct equivalent. An agent has no human learning curve, but the desk's edge only improves through a feedback loop (idea 3).</td><td><span class="pill cov">not applicable</span></td><td><span class="pill skip">Skip</span></td></tr>
+<tr><td>2</td><td>"A focused playbook with well-defined setups"; strategy-hopping is a trap.</td><td>Assertion.</td><td>Only partly covered: the desk hunts "A+" setups, but nothing says A+ is a written, enumerated catalogue.</td><td><span class="pill test">partly new</span></td><td><span class="pill adopt">Adopt</span></td></tr>
+<tr><td>3</td><td>Journalling, post-trade review, "data-driven feedback loops".</td><td>"Without reviewing your trades, you lose the opportunity to identify mistakes, repeat strengths…"</td><td>Not in the desk description. The wiki logs analyst claims, not the desk's own trades and no-trades.</td><td><span class="pill test">new</span></td><td><span class="pill adopt">Adopt</span></td></tr>
+<tr><td>4</td><td>"Clear risk parameters"; avoid overleverage and "inconsistent sizing".</td><td>"Overleveraging… creates emotional strain that distorts decision-making."</td><td>Not in the desk description (may exist elsewhere, unknown).</td><td><span class="pill test">new</span></td><td><span class="pill adopt">Adopt</span></td></tr>
+<tr><td>5</td><td>"Strategic use of size when conviction is high"; "scale discipline alongside size".</td><td>Assertion.</td><td>Not in the desk description.</td><td><span class="pill test">new</span></td><td><span class="pill test">Test first</span></td></tr>
+<tr><td>6</td><td>"Knowing when not to trade"; "the discipline to sit out"; overtrading "erodes discipline".</td><td>Assertion.</td><td>Covered in part: a no-trade with a specific reason is allowed. In tension with "a wake is an order to take" combined with many wakes a day.</td><td><span class="pill test">partly contradicts</span></td><td><span class="pill adopt">Adopt guardrail</span></td></tr>
+<tr><td>7</td><td>Tilt, breaking risk limits, "you know when to step back", fast recovery from drawdowns.</td><td>Assertion.</td><td><b>Contradicts</b> the "big daily loss" wake, which tells the agent to hunt and TAKE a trade right after a loss.</td><td><span class="pill skip">contradicts</span></td><td><span class="pill adopt">Adopt</span> (thresholds: test)</td></tr>
+<tr><td>8</td><td>Obsessing over P&amp;L leads to short-term thinking; focus on execution quality, not single outcomes.</td><td>Assertion.</td><td>Not in the desk description.</td><td><span class="pill test">new</span></td><td><span class="pill test">Test first</span></td></tr>
+<tr><td>9</td><td>"Pre-market routines".</td><td>Assertion.</td><td>Covered by the pre-market-open broker check.</td><td><span class="pill cov">covered</span></td><td>—</td></tr>
+<tr><td>10</td><td>"Entries are planned. Exits are defined."</td><td>Assertion.</td><td>Covered: exits are an alert plus a working order ticket, and setups are re-checked at the moment of action.</td><td><span class="pill cov">covered</span></td><td>—</td></tr>
+<tr><td>11</td><td>"Clear alignment between market conditions and setup triggers."</td><td>Assertion.</td><td>Covered: the agent re-checks the setup at the moment of action.</td><td><span class="pill cov">covered</span></td><td>—</td></tr>
+<tr><td>12</td><td>Elite trading "is not about being right more often… or predicting market tops and bottoms"; the edge "is behavioural".</td><td>Assertion.</td><td>Matters for how the desk uses XO: it turns his <i>claims</i> into wakes, but by his own account his edge is execution (order flow, DOM), and that doesn't come through in a tweet.</td><td><span class="pill test">new (source weighting)</span></td><td><span class="pill adopt">Adopt as wiki note</span></td></tr>
+<tr><td>13</td><td>"Evolve without overcomplicating"; maintain "edge integrity".</td><td>Assertion.</td><td>Not in the desk description. Relevant because desk rules and skills get patched often.</td><td><span class="pill test">new</span></td><td><span class="pill test">Test first</span> (version tags)</td></tr>
+</table></div>
+<p class="note">Status key: covered = the desk already does it; contradicts = the desk does the opposite; new = not in the desk description I was given. Some "new" items may already exist in parts of the desk I can't see.</p>
+
+<h2>2 · The new ideas worth having</h2>
+
+<div class="idea"><h3>A. Journal every wake: trades and no-trades (ideas 2, 3, 8) <span class="pill adopt">Adopt</span></h3>
+<dl>
+<dt>What changes</dt><dd>Every wake writes one structured record: wake type, source analyst and claim id, setup id from a written A+ catalogue, the agent's thesis, stated probability, risk taken, entry/exit fills, and a process grade separate from the P&amp;L. A weekly review computes expectancy and sample size per setup, per analyst, per wake type, and per desk-rule version.</dd>
+<dt>What it would have added or prevented</dt><dd>It answers questions the desk can't answer today. Do XO-sourced wakes make money? Which of the six daily hunts ever produce A+ trades? Does the "analyst disagreement" input add or lose money? Without this, idea 13 (edge integrity) and any sizing change can't be tested.</dd>
+<dt>Independent evidence</dt><dd><b>For:</b> investors do get better with experience, though much of the aggregate improvement comes from weak traders quitting, not from learning (Seru, Shumway &amp; Stoffman, <i>Learning by Trading</i>, RFS 2010: <a href="https://doi.org/10.1093/rfs/hhp060">https://doi.org/10.1093/rfs/hhp060</a>). For a desk that can't "quit", measurement is the only way to learn. <b>Against or caution:</b> scoring many small slices leads to overfitting. Testing many variants makes some look great by chance (Bailey, Borwein, López de Prado &amp; Zhu, Notices of the AMS 2014: <a href="https://www.ams.org/notices/201405/rnoti-p458.pdf">https://www.ams.org/notices/201405/rnoti-p458.pdf</a>).</dd>
+<dt>Author's own related posts (outside the article)</dt><dd>On 6 Jun 2026 (20:31 AWST) XO reported about 200 trades since September, a 35% win rate, and max drawdown under 7.5%, saying profit comes "less by being right frequently and more by managing losses well": <a href="https://x.com/Trader_XO/status/2063237450751766587">https://x.com/Trader_XO/status/2063237450751766587</a>. These are self-reported and unaudited.</dd>
+<dt>Risk</dt><dd>Small samples. Rules: no setup or analyst gets promoted or dropped on fewer than about 30 trades, and report confidence intervals, not bare hit rates.</dd></dl></div>
+
+<div class="idea"><h3>B. Change the big-daily-loss wake to "de-risk and review first" (idea 7) <span class="pill adopt">Adopt</span></h3>
+<dl>
+<dt>What changes</dt><dd>Today a big daily loss wakes the agent with an order to hunt an A+ trade and take it. Proposed: on that wake the agent first checks open exposure and working exit tickets, writes a loss review, and then can open new risk only under a stricter bar (for example a smaller size cap for the rest of the session). The bar steps down as drawdown deepens.</dd>
+<dt>What it would have added or prevented</dt><dd>It stops the desk from automatically adding risk at the moment it's most likely to be wrong about regime, which is the machine version of "going on tilt". I don't have the desk's own P&amp;L history, so I can't name a specific trade it would have prevented (unverified).</dd>
+<dt>Independent evidence</dt><dd><b>For:</b> professional CBOT traders who lost in the morning took more risk in the afternoon (Coval &amp; Shumway, <i>Do Behavioral Biases Affect Prices?</i>, JF 2005: <a href="https://doi.org/10.1111/j.1540-6261.2005.00723.x">https://doi.org/10.1111/j.1540-6261.2005.00723.x</a>). After losses, people are drawn to bets that offer a chance to break even (Thaler &amp; Johnson, Management Science 1990: <a href="https://doi.org/10.1287/mnsc.36.6.643">https://doi.org/10.1287/mnsc.36.6.643</a>). Optimal strategies under a drawdown limit cut risky exposure as the drawdown floor gets closer (Grossman &amp; Zhou, Mathematical Finance 1993: <a href="https://doi.org/10.1111/j.1467-9965.1993.tb00044.x">https://doi.org/10.1111/j.1467-9965.1993.tb00044.x</a>). <b>Against:</b> an AI has no emotions. And loss-triggered de-risking only adds value when returns persist; under a random walk it is a drag (Kaminski &amp; Lo, <i>When do stop-loss rules stop losses?</i>, JFM 2014: <a href="https://doi.org/10.1016/j.finmar.2013.07.001">https://doi.org/10.1016/j.finmar.2013.07.001</a>). Even so, a prompt that says "hunt and take" after a loss builds in the break-even-seeking pattern whether or not the agent has emotions.</dd>
+<dt>Risk</dt><dd>It could miss genuine post-shock opportunities, such as an IV spike that's good for selling premium. That's why the exact thresholds should be tested, not the principle.</dd></dl></div>
+
+<div class="idea"><h3>C. Risk budget and overtrading guard (ideas 4, 6) <span class="pill adopt">Adopt</span></h3>
+<dl>
+<dt>What changes</dt><dd>Set a fixed premium-at-risk per trade, portfolio caps on net delta and vega, and a daily and weekly cap on new-risk count. Track a "take rate" per wake type. If a wake type turns into trades far more often than its journalled expectancy justifies, flag it.</dd>
+<dt>What it would have added or prevented</dt><dd>The desk has at least six scheduled hunts a day, plus price alerts, analyst-claim wakes and position wakes, each framed as "take it if A+ exists". This guard stops a high wake count turning into a high trade count.</dd>
+<dt>Independent evidence</dt><dd><b>For:</b> the households that traded most earned 11.4% a year against the market's 17.9% (Barber &amp; Odean, <i>Trading Is Hazardous to Your Wealth</i>, JF 2000: <a href="https://doi.org/10.1111/0022-1082.00226">https://doi.org/10.1111/0022-1082.00226</a>). Fewer than 1% of Taiwanese day traders reliably earned net abnormal returns (Barber, Lee, Liu &amp; Odean, JFM 2014: <a href="https://doi.org/10.1016/j.finmar.2013.05.006">https://doi.org/10.1016/j.finmar.2013.05.006</a>). <b>Partly against:</b> option trading costs are lower than quoted spreads suggest when execution is timed well (Muravyev &amp; Pearson, RFS 2020: <a href="https://doi.org/10.1093/rfs/hhaa010">https://doi.org/10.1093/rfs/hhaa010</a>). A careful agent pays less per trade, but costs still stack up across many trades.</dd>
+<dt>Risk</dt><dd>Hard caps could block a real A+ setup late in the day. Allow an override that has to be justified in the journal.</dd></dl></div>
+
+<div class="idea"><h3>D. Conviction-scaled sizing (idea 5) <span class="pill test">Test first</span></h3>
+<dl>
+<dt>What changes</dt><dd>Size scales with the agent's stated probability and payoff, but only after those probabilities have proven calibrated (Brier score or calibration buckets from journal A).</dd>
+<dt>Independent evidence</dt><dd>Kelly sizing maximises long-run growth, but full Kelly brings severe drawdowns and depends on accurate edge estimates; fractional Kelly trades growth for safety (MacLean, Thorp &amp; Ziemba, "Good and bad properties of the Kelly criterion": <a href="https://www.stat.berkeley.edu/~aldous/157/Papers/Good_Bad_Kelly.pdf">https://www.stat.berkeley.edu/~aldous/157/Papers/Good_Bad_Kelly.pdf</a>). XO's own numbers point the same way. His max drawdown was 3.9% before May and rose to just under 7.5% "when I began building larger swing positions" (6 Jun 2026: <a href="https://x.com/Trader_XO/status/2063237450751766587">https://x.com/Trader_XO/status/2063237450751766587</a>), then to 11% (30 Jun 2026: <a href="https://x.com/Trader_XO/status/2071945855016276304">https://x.com/Trader_XO/status/2071945855016276304</a>). Self-reported.</dd>
+<dt>Risk</dt><dd>An LLM's stated confidence is not calibrated by default. Sizing up on uncalibrated conviction is the fastest way to a large drawdown. Paper-test first.</dd></dl></div>
+
+<div class="idea"><h3>E. Version tags on desk rules (idea 13) <span class="pill test">Test first</span></h3>
+<dl><dt>What changes</dt><dd>Every change to the desk's prompts, skills or rules bumps a version, and every journal record carries that version, so results can be attributed. The article's "strategy-hopping" trap applies to a desk whose rules are patched often.</dd>
+<dt>Evidence</dt><dd>Same overfitting caution as A (Bailey et al. 2014, linked above). XO himself says he resets his journal and datasets "as your process changes" (30 Jun 2026: <a href="https://x.com/Trader_XO/status/2071945855016276304">https://x.com/Trader_XO/status/2071945855016276304</a>). Version tags do the same job without throwing data away.</dd>
+<dt>Risk</dt><dd>Low. It's bookkeeping.</dd></dl></div>
+
+<div class="idea"><h3>F. Weight XO as levels and context, not signals (idea 12) <span class="pill adopt">Adopt as wiki note</span></h3>
+<p>The article says elite trading isn't about predicting. XO's posts are mostly two-sided "if acceptance above X, then Y; failure, then Z" maps, and his edge is execution (order flow, DOM, a pilot position then adding). So his posts work best on the desk as level maps that feed the TradingView alerts. Treating them as directional claims that force a side is a poor fit. XO is also moving to a "hybrid", more systematic approach (30 Jun 2026, linked above), and on 12 Aug 2026 he wrote <i>"Don't automate an agentic workflow until you've successfully performed it manually enough times to understand what you're automating"</i> (<a href="https://x.com/Trader_XO/status/2087598722515378428">https://x.com/Trader_XO/status/2087598722515378428</a>).</p></div>
+
+<p class="note"><b>Skipped:</b> idea 1 (the hockey-stick curve itself). Independent evidence mostly cuts against it as a general promise. Of Brazilian day traders who kept going for more than 300 days, 97% lost money (Chague, De-Losso &amp; Giovannetti, <i>Day Trading for a Living?</i>, SSRN 2019: <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3423101">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3423101</a>). The curve is survivorship: the people who drew it are the ones who made it.</p>
+
+<h2>3 · Trader_XO's track record</h2>
+<p>Method: I pulled XO's dated X posts that have specific levels (Oct 2025 – Sep 2026) and graded each one against Binance spot hourly candles (BTCUSDT, ETHUSDT, via data-api.binance.vision). Rule: a call is <span class="hit">right</span> if its stated level printed within the call's own horizon (or about 1–2 weeks if none was given), and before any stated invalidation. It's <span class="miss">wrong</span> if the condition triggered but the target never printed. It's <span class="unc">unclear</span> if the call was two-sided, its condition never triggered, or the position's exit wasn't disclosed. All times AWST.</p>
+
+<div class="tw"><table>
+<tr><th>Date (AWST)</th><th>Call (short quote)</th><th>Price at call</th><th>What happened</th><th>Grade</th></tr>
+<tr><td>7 Oct 2025 17:28</td><td>BTC "120-121s key level… Below that then 116-117 comes into play" <a href="https://x.com/Trader_XO/status/1975493312212836639">https://x.com/Trader_XO/status/1975493312212836639</a></td><td>$123,862</td><td>Ticked up to $125,126 first, then 117k printed 11 Oct 03:00. Crash low $102,000 on 11 Oct 05:00.</td><td class="hit">Right</td></tr>
+<tr><td>8 Oct 2025 23:32</td><td>BTC "acceptance below [122] then I'm leaning towards… poor lows being traded down into 120s" <a href="https://x.com/Trader_XO/status/1975947407817855025">https://x.com/Trader_XO/status/1975947407817855025</a></td><td>$122,320</td><td>Bounced to $124,197, then $120,500 printed 10 Oct 00:00.</td><td class="hit">Right</td></tr>
+<tr><td>10 Oct 2025 06:05</td><td>BTC "Breaking below 120s with momentum… we move towards 117s" <a href="https://x.com/Trader_XO/status/1976408750702346470">https://x.com/Trader_XO/status/1976408750702346470</a></td><td>$121,461</td><td>Broke 120k on 10 Oct 23:00 and hit 117k four hours later (same move as the two calls above, so these are correlated).</td><td class="hit">Right</td></tr>
+<tr><td>26 Nov 2025 21:43</td><td>BTC: losing the 50-week MA "has often signaled a deeper move toward the 200MA or even the 300-week MA" <a href="https://x.com/Trader_XO/status/1993677245802512578">https://x.com/Trader_XO/status/1993677245802512578</a></td><td>$86,643</td><td>Low of $60,000 in the week of 2 Feb 2026, then $57,800 on 1 Jul 2026 09:00, below the 200-week MA (about $62.7k that week, computed from Binance weekly closes).</td><td class="hit">Right (long horizon, no date)</td></tr>
+<tr><td>27 Nov 2025 21:29</td><td>BTC "92-94K resistance… probable range… [to] lower bounds of 80s" <a href="https://x.com/Trader_XO/status/1994035919918104915">https://x.com/Trader_XO/status/1994035919918104915</a></td><td>$90,987</td><td>Through 31 Dec: high $94,589, low $83,823. The range held.</td><td class="hit">Right</td></tr>
+<tr><td>11 Dec 2025 11:10</td><td>"$BTC 94k 🧢 Might be the last one for the year" <a href="https://x.com/Trader_XO/status/1998953470859391297">https://x.com/Trader_XO/status/1998953470859391297</a></td><td>$90,074</td><td>The year's remaining high was $93,555, under 94k.</td><td class="hit">Right</td></tr>
+<tr><td>28 Apr 2026 20:00</td><td>BTC "through the 75.7 level… opens up a thin pathway to 73s" <a href="https://x.com/Trader_XO/status/2049096299207655572">https://x.com/Trader_XO/status/2049096299207655572</a></td><td>$76,618</td><td>Dipped through to $74,938 (30 Apr 02:00); 73k never printed, and price went to 80k by 4 May.</td><td class="miss">Wrong</td></tr>
+<tr><td>29 Apr 2026 16:26</td><td>BTC "a rotation back higher to trade the recent highs into 80-81" <a href="https://x.com/Trader_XO/status/2049404912493080656">https://x.com/Trader_XO/status/2049404912493080656</a></td><td>$77,054</td><td>80k on 4 May 10:00, 81k on 5 May 11:00.</td><td class="hit">Right</td></tr>
+<tr><td>23 May 2026 17:26</td><td>BTC short from 81.5, "impulsive move lower towards monthly value area lows around 71… targeting… 73k" <a href="https://x.com/Trader_XO/status/2058117305834389866">https://x.com/Trader_XO/status/2058117305834389866</a></td><td>$74,684</td><td>73k on 28 May, 71.5k on 1 Jun 21:00, then down to $59,131 (6 Jun). Never back above $78,080.</td><td class="hit">Right, biggest win</td></tr>
+<tr><td>18 Jun 2026 03:43</td><td>BTC "Losing and staying below monthly vwap… continuation down towards 60-62k" <a href="https://x.com/Trader_XO/status/2067332441488994557">https://x.com/Trader_XO/status/2067332441488994557</a></td><td>$65,516</td><td>62k on 23 Jun 16:00, 60k on 25 Jun 00:00.</td><td class="hit">Right</td></tr>
+<tr><td>24 Jun 2026 23:54</td><td>BTC "59s… through there opens the pathway to 54s later this week" <a href="https://x.com/Trader_XO/status/2069811371986804757">https://x.com/Trader_XO/status/2069811371986804757</a></td><td>$61,113</td><td>Broke 59k (to $58,115 on 25 Jun); low through 6 Jul was $57,800. 54k never printed.</td><td class="miss">Wrong</td></tr>
+<tr><td>6 Jul 2026 21:20</td><td>BTC "60.5 - 61.3 the zone that needs to hold… Remaining short from 63s" <a href="https://x.com/Trader_XO/status/2074121281092366841">https://x.com/Trader_XO/status/2074121281092366841</a></td><td>$61,754</td><td>The zone held (low $61,545). Price reached 66k on 21 Jul, so the disclosed short went offside. Exit not disclosed (unverified).</td><td class="unc">Unclear</td></tr>
+<tr><td>11 Sep 2026 17:26</td><td>BTC two-sided: 76.1 / 77.4 long zone, or rotation to 78.4 <a href="https://x.com/Trader_XO/status/2098342289944822083">https://x.com/Trader_XO/status/2098342289944822083</a></td><td>$77,365</td><td>Both sides traded within an hour.</td><td class="unc">Unclear</td></tr>
+<tr><td>15 Sep 2026 06:09</td><td>BTC 79.5–80k: "Wouldn't be surprised to see it prove difficult to clear on the first attempt" <a href="https://x.com/Trader_XO/status/2099621522084159699">https://x.com/Trader_XO/status/2099621522084159699</a></td><td>$78,758</td><td>Stalled at $78,568, fell to $74,968, and cleared 80k only on 18 Sep.</td><td class="hit">Right (soft)</td></tr>
+<tr><td>19 Sep 2026 22:30</td><td>BTC: acceptance above 82–83k, then "the range qtr / value area high around 90k"; if rejected, 78.5–79k should hold <a href="https://x.com/Trader_XO/status/2101318111370592666">https://x.com/Trader_XO/status/2101318111370592666</a></td><td>$81,364</td><td>High of $87,396 (22 Sep); 90k not reached as of 10 Oct, and 78.5k never lost.</td><td class="unc">Unclear (open)</td></tr>
+<tr><td>25 Sep 2026 17:04</td><td>ETH "Acceptance above 2720 then… 29s… Failure… keep this 23-27 range in play" <a href="https://x.com/Trader_XO/status/2103410330038628587">https://x.com/Trader_XO/status/2103410330038628587</a></td><td>$2,691</td><td>Max $2,777, never 2,900; low $2,406 (9 Oct). He disclosed cutting the long and flipping short that day (<a href="https://x.com/Trader_XO/status/2103486773162655811">https://x.com/Trader_XO/status/2103486773162655811</a>), which went in his favour. Exit not disclosed.</td><td class="unc">Unclear</td></tr>
+<tr><td>29 Sep 2026 18:58</td><td>ETH 29s, then "I'd expect BTC to revisit 86s" <a href="https://x.com/Trader_XO/status/2104888418937262197">https://x.com/Trader_XO/status/2104888418937262197</a></td><td>$2,718</td><td>The condition never triggered.</td><td class="unc">Unclear</td></tr>
+</table></div>
+
+<div class="cards">
+<div class="card"><span class="k">17</span><span class="l">calls checked</span></div>
+<div class="card"><span class="k"><span class="hit">10</span> · <span class="miss">2</span> · <span class="unc">5</span></span><span class="l">right · wrong · unclear</span></div>
+<div class="card"><span class="k">83%</span><span class="l">right among gradeable calls (10/12). Small, hand-picked sample</span></div>
+<div class="card"><span class="k">~32%</span><span class="l">average naive base rate for the short-term targets: how often BTC touches a level that far away, in that direction, within that window (Sep 2025 – Oct 2026 data)</span></div>
+</div>
+
+<h3>How to read that</h3>
+<ul>
+<li><b>Specificity:</b> high on levels, low on commitment. Most posts are conditional maps ("acceptance above X → Y; failure → Z"), which are hard to grade. Five of 17 couldn't be scored, and the "right" grades lean on conditions I had to interpret.</li>
+<li><b>Edge over chance:</b> for the eight short-term targets that printed, the naive chance of BTC touching a level that far away in the same window ranged from 10% to 59%, about 32% on average. So these weren't trivial nearby levels.</li>
+<li><b>Independent scorecard:</b> CoinVerdict grades XO at 42.3% directional (n=26, 7-day window with a ±3% band, mostly backtested) against a 31.0% same-direction benchmark. That ranks him 97.7th percentile of 22 tracked accounts. Their only <i>live</i> call was a miss: "Still a range" on 4 Aug 2026, after which BTC rose 14% (<a href="https://coinverdict.io/kol/Trader_XO">https://coinverdict.io/kol/Trader_XO</a>, fetched 10 Oct 2026). Biggles's own wiki scoreboard has 3 XO sources and 1 graded hit (the 20 Apr 2026 BTC ≤70/69/65k call, hit 2 Jun 2026).</li>
+<li><b>Self-reported P&amp;L:</b> perps account "up around 72%" since September 2025 with an 11% max drawdown (30 Jun 2026: <a href="https://x.com/Trader_XO/status/2071945855016276304">https://x.com/Trader_XO/status/2071945855016276304</a>). Unaudited. An earlier version of that post (<a href="https://x.com/Trader_XO/status/2071944171225497826">https://x.com/Trader_XO/status/2071944171225497826</a>) said "September 2024", and the edit to "2025*" is marked with an asterisk, so it's visible rather than quiet.</li>
+</ul>
+<h3>Red flags</h3>
+<ul>
+<li><b>After-the-fact position claims.</b> "As someone who shorted 125 before a few days before 10/10" (6 Jun 2026: <a href="https://x.com/Trader_XO/status/2063264642504221013">https://x.com/Trader_XO/status/2063264642504221013</a>). I couldn't find the original entry post at 125k (unverified). A public "121's Half off" on 7 Oct 2025 (<a href="https://x.com/Trader_XO/status/1975588142821580803">https://x.com/Trader_XO/status/1975588142821580803</a>) and "remaining short from the highs" on 11 Oct 2025 (<a href="https://x.com/Trader_XO/status/1976680433082314919">https://x.com/Trader_XO/status/1976680433082314919</a>) back up a short being on before the crash.</li>
+<li><b>Sponsorships.</b> His streams are "in partnership with @PrimeXBT", a derivatives exchange (for example 13 May 2026: <a href="https://x.com/Trader_XO/status/2054556173060227252">https://x.com/Trader_XO/status/2054556173060227252</a>). He has also promoted the Moonberg/Moonscope scanner (<a href="https://x.com/Trader_XO/status/1998705004912238977">https://x.com/Trader_XO/status/1998705004912238977</a>) and the pepo app. No paid signal group found; the "XO Mentorship" was described as "practically free" (<a href="https://x.com/Trader_XO/status/2078065531605733802">https://x.com/Trader_XO/status/2078065531605733802</a>).</li>
+<li><b>Edits and reposts:</b> many posts appear twice minutes apart, with a typo-fixed version (for example ETH "1720s" vs "2720s" on 29 Sep 2026). Edits are visible in X's edit history. No deleted calls found, but deletions can't be fully checked.</li>
+<li><b>Survivorship in the article itself:</b> the hockey-stick story is told by someone who survived. See the Chague et al. base rates above.</li>
+</ul>
+<p><b>Weight to give him:</b> medium-high as a <i>level map</i> for BTC and ETH, medium-low as a source of directional claims that force a side. He says himself that he doesn't call tops and bottoms, and his two-sided posts can't be falsified as trade triggers.</p>
+
+<h2>4 · Speculation</h2>
+<div class="spec"><span class="tag">SPECULATION. NOT TESTED, NOT SOURCED.</span>
+<ul>
+<li><b>From journal to source trust scores.</b> Once every wake is journalled, each analyst could get a running posterior on expectancy (shrunk toward zero when samples are small). The "analyst disagreement" rule could then side with the analyst whose posterior is better on <i>that kind</i> of claim, not just argue the chart.</li>
+<li><b>Loss-state machine.</b> Green, amber and red desk states based on drawdown, each with its own A+ bar, size cap and allowed structures (for example red = defined-risk only and no new short gamma). This is the agent version of "know when to step back".</li>
+<li><b>Calibration-gated sizing.</b> The agent logs a probability on every trade. When its Brier score passes a threshold over 50+ trades, a fractional-Kelly sizing tier unlocks automatically, and it locks again if calibration slips.</li>
+<li><b>Pilot then add, for options.</b> XO's "pilot position… only adding size once a trade begins proving itself" (6 Jun 2026, linked above) could become: open a small defined-risk spread, then add or roll width only after a confirming re-check. This fits the desk's "re-check at the moment of action" rule naturally.</li>
+<li><b>Shadow desks.</b> Run a paper copy of the desk on the next rule version alongside the live desk, and promote it only if it beats the live version over a fixed sample. This is idea E as a continuous A/B test.</li>
+<li><b>"Hockey stick" for an agent.</b> If the desk's edge improves at all, it will probably come in steps when a feedback signal clears its noise threshold, not gradually. A regime change could also flatten the curve again. That's why journal resets should be version tags, not deletions.</li>
+<li><b>Using XO as a decision gate, not a signal.</b> XO's own stated AI direction is "decision gates that gradually remove everything irrelevant" (7 Aug 2026: <a href="https://x.com/Trader_XO/status/2085750399319892374">https://x.com/Trader_XO/status/2085750399319892374</a>). The desk could use his levels as gates that filter its six scheduled hunts, not as wakes in their own right.</li>
+</ul></div>
+
+<h2>5 · What I couldn't verify</h2>
+<ul>
+<li>The original 125k BTC short entry post (Oct 2025): not found. Only the partial-close and "remaining short" posts are public.</li>
+<li>Exits for the 63k BTC short (Jul 2026) and the ETH flip-short (Sep 2026): not disclosed.</li>
+<li>XO's P&amp;L figures (72%, 11% max drawdown, 35% win rate, ~200 trades): self-reported, no audit found.</li>
+<li>Whether the desk already has a journal, risk caps or rule versioning: not stated in the brief, so those ideas are marked "new" on the description I was given.</li>
+<li>My call sample comes from keyword searches of X posts (25 results per window), not his full timeline, so selection bias is likely.</li>
+</ul>
+
+<footer>Sources: the article via <a href="https://api.fxtwitter.com/Trader_XO/status/2059970520695664814">https://api.fxtwitter.com/Trader_XO/status/2059970520695664814</a>; X posts via the X API; prices from Binance spot hourly and weekly candles (data-api.binance.vision), pulled 10 Oct 2026; CoinVerdict scorecard fetched 10 Oct 2026; papers linked inline by DOI. Research only. No trades, posts or messages were made.</footer>
+</main>
+</body>
+</html>
