@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qwen3.5-397B vs Qwen3.8-Flash-Next · benchmarks + Strix Halo fit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f6f3;--surface:#fff;--ink:#1a1a1a;--muted:#5c5c5c;--line:rgba(0,0,0,.08);--accent:#c45c26;--ok:#2f7d4f;--warn:#a86b00;--bad:#b3261e}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.06rem/1.62 "Source Serif 4",Georgia,serif}
+.top{font:500 .85rem/1.4 "IBM Plex Sans",system-ui,sans-serif;color:var(--muted);border-bottom:1px solid var(--line);padding:.7rem 1.1rem;background:var(--surface)}
+.top b{color:var(--ink)}
+main{max-width:46rem;margin:0 auto;padding:1.4rem 1.1rem 3rem}
+h1{font:600 1.7rem/1.25 "IBM Plex Sans",system-ui,sans-serif;margin:.6rem 0 .5rem}
+h2{font:600 1.22rem/1.3 "IBM Plex Sans",system-ui,sans-serif;margin:2.2rem 0 .6rem;padding-top:.6rem;border-top:1px solid var(--line)}
+h3{font:600 1.05rem/1.35 "IBM Plex Sans",system-ui,sans-serif;margin:1.3rem 0 .4rem}
+p{margin:.55rem 0}
+ul{padding-left:1.2rem}
+li{margin:.3rem 0}
+a{color:var(--accent);text-underline-offset:2px}
+sup a{text-decoration:none;font:600 .72rem "IBM Plex Sans",sans-serif}
+.thesis{font-size:1.1rem;color:#333}
+.badges{display:flex;flex-wrap:wrap;gap:.4rem;margin:.8rem 0}
+.badge{font:500 .78rem/1 "IBM Plex Sans",sans-serif;padding:.4rem .6rem;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+.verdict{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:1rem 0}
+@media(max-width:560px){.verdict{grid-template-columns:1fr}}
+.vbox{border-radius:12px;padding:.9rem 1rem;border:1px solid var(--line);background:var(--surface)}
+.vbox h3{margin:0 0 .4rem;font-size:1rem}
+.vbox.do{border-left:5px solid var(--ok)}
+.vbox.ig{border-left:5px solid var(--bad)}
+.vbox ul{margin:.2rem 0;font-size:.98rem}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:.6rem;margin:1rem 0}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:.7rem .8rem}
+.kpi .n{font:600 1.35rem/1.15 "IBM Plex Sans",sans-serif}
+.kpi .l{font:400 .8rem/1.35 "IBM Plex Sans",sans-serif;color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem;margin:.8rem 0}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:.8rem 0;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font:400 .86rem/1.4 "IBM Plex Sans",system-ui,sans-serif;min-width:34rem}
+th,td{padding:.5rem .6rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#faf9f6;font-weight:600}
+td.num{white-space:nowrap;font-variant-numeric:tabular-nums}
+tr.sec td{background:#f3f1ec;font-weight:600;color:#333}
+.win{color:var(--ok);font-weight:600}
+.na{color:#999}
+.tag{display:inline-block;font:600 .66rem/1 "IBM Plex Sans",sans-serif;letter-spacing:.04em;padding:.25rem .4rem;border-radius:4px;vertical-align:1px}
+.t-v{background:#fdf1dc;color:var(--warn)}
+.t-i{background:#e7f3ec;color:var(--ok)}
+.t-c{background:#e8eef9;color:#2a4f9a}
+.t-e{background:#eee;color:#555}
+.note{font:400 .84rem/1.5 "IBM Plex Sans",sans-serif;color:var(--muted)}
+ol.src{font:400 .84rem/1.5 "IBM Plex Sans",sans-serif;padding-left:1.5rem;word-break:break-word}
+footer{font:400 .8rem/1.5 "IBM Plex Sans",sans-serif;color:var(--muted);margin-top:2.5rem;border-top:1px solid var(--line);padding-top:.8rem}
+</style>
+</head>
+<body>
+<div class="top"><b>Qwen3.5-397B-A17B vs Qwen3.8-Flash-Next</b> · for a 128 GB Strix Halo · researched 9 Oct 2026, 2:43 pm AWST</div>
+<main>
+
+<h1>Ignore Qwen3.5-397B. Keep running Flash Next.</h1>
+<p class="thesis">The 397B is the older, bigger model. On every benchmark both models report, Flash Next scores the same or better. To fit 397B in 123 GB you have to squeeze it to about 2 bits per weight, which costs quality, leaves almost no room for context, and is slow to read prompts on this box.</p>
+<div class="badges">
+<span class="badge">Verdict: Ignore</span>
+<span class="badge">Confidence: high</span>
+<span class="badge">Matches your GLM/MiMo finding</span>
+</div>
+
+<div class="verdict">
+<div class="vbox do">
+<h3>Do</h3>
+<ul>
+<li>Keep Flash Next as the daily driver (Q4-class GGUF plus the MTP draft head).</li>
+<li>If long thinking runs are the pain, lower Flash Next's <code>reasoning_effort</code> (xhigh → medium/low) before you think about switching models.<sup><a href="#s2">2</a></sup></li>
+<li>If you want to try 397B for curiosity, use UD-IQ2_XXS or bartowski IQ2_XXS on Vulkan with a short context. Treat it as a test, not a migration.</li>
+</ul>
+</div>
+<div class="vbox ig">
+<h3>Ignore</h3>
+<ul>
+<li>Q3 or higher builds of 397B. The smallest Q3 GGUF is 140 GB, so it doesn't fit.</li>
+<li>EXL3 for 397B on this box. Upstream ExLlamaV3 is CUDA-only, and I found no 397B EXL3 runs on gfx1151.</li>
+<li>The idea that "bigger = smarter". In both Qwen's numbers and Artificial Analysis's tests, the 6B-active model comes out ahead.</li>
+</ul>
+</div>
+</div>
+
+<div class="kpis">
+<div class="kpi"><div class="n">397B / 17B</div><div class="l">3.5-397B total / active params<sup><a href="#s1">1</a></sup></div></div>
+<div class="kpi"><div class="n">125B / 6B</div><div class="l">Flash Next main / active (+51B n-gram embeddings, +4B MTP)<sup><a href="#s2">2</a></sup></div></div>
+<div class="kpi"><div class="n">18 vs 40</div><div class="l">Artificial Analysis Intelligence Index v4.3.2 (397B vs Flash Next)<sup><a href="#s5">5</a></sup></div></div>
+<div class="kpi"><div class="n">~107–115 GB</div><div class="l">Smallest usable 397B GGUFs (2-bit class)<sup><a href="#s9">9</a>,<a href="#s10">10</a></sup></div></div>
+<div class="kpi"><div class="n">17–19 tok/s</div><div class="l">397B IQ2_XXS decode on Strix Halo (Vulkan, 4K ctx)<sup><a href="#s12">12</a></sup></div></div>
+<div class="kpi"><div class="n">~21–33 tok/s</div><div class="l">Flash Next decode on Strix Halo without speculative decoding (MTP takes it higher)<sup><a href="#s15">15</a>,<a href="#s17">17</a></sup></div></div>
+</div>
+
+<h2>Plain verdict</h2>
+<p><b>Ignore it.</b> Qwen3.5-397B came out in February 2026. Flash Next came out in August and is a preview of the Qwen4 architecture. Qwen's own technical report says Flash Next was designed to <i>match the 397B-A17B flagship</i>. The report says it does that with a third of the active parameters and roughly a ninth of the training compute.<sup><a href="#s4">4</a></sup> The post-trained scores support that. Where both models report the same benchmark (GPQA, HLE, LiveCodeBench v6, SWE-bench Multilingual, IFBench, plus several vision tests), Flash Next comes out ahead. Artificial Analysis ran both models through the same independent suite and scored Flash Next 40 and 397B 18.<sup><a href="#s5">5</a></sup></p>
+<p>On your box the gap gets bigger. Fitting 397B means a 2-bit quant. At that size, perplexity rises about 11% over BF16 (3.87 vs 3.49).<sup><a href="#s11">11</a></sup> The model also takes up 107–115 GB, which leaves only a few GB for KV cache and the OS. One Strix Halo user measured 17–19 tok/s decode but only 25–33 tok/s prompt processing.<sup><a href="#s12">12</a></sup> For comparison, people measure about 400–935 tok/s prefill with Flash Next on the same chip.<sup><a href="#s15">15</a>,<a href="#s17">17</a></sup> Long agent prompts would take minutes to read in. This is the same pattern you saw with GLM and MiMo: the bigger MoE brings no quality edge, and on this box it costs you a lot.</p>
+<p><b>One honest caveat.</b> Flash Next is very verbose. Artificial Analysis measured about 108k output tokens per task for Flash Next and about 19k for 397B (Reasoning).<sup><a href="#s5">5</a></sup> On simple jobs, a terse model can finish sooner even when it generates tokens more slowly. The fix is to lower Flash Next's reasoning effort. Switching to a model that scored much lower on the same tests isn't the answer.</p>
+
+<h2>Side-by-side benchmarks</h2>
+<p class="note"><span class="tag t-v">VENDOR</span> = Qwen's own claims from the model card or tech report. <span class="tag t-i">INDEP</span> = third-party lab. <span class="tag t-c">COMMUNITY</span> = individual users. "N/A" means the source doesn't publish that number. Both cards are thinking-mode results by default, but the two cards were run months apart, with different comparison sets and sometimes different harnesses (noted per row). Read close gaps as noise.</p>
+<div class="tablewrap">
+<table>
+<thead><tr><th>Item</th><th>Qwen3.5-397B-A17B</th><th>Qwen3.8-Flash-Next</th><th>Notes</th></tr></thead>
+<tbody>
+<tr class="sec"><td colspan="4">Spec</td></tr>
+<tr><td>Total params</td><td class="num">397B<sup><a href="#s1">1</a></sup></td><td class="num">125B + 51B n-gram + 4B MTP<sup><a href="#s2">2</a></sup></td><td>Artificial Analysis lists Flash Next as 180B total<sup><a href="#s5">5</a></sup></td></tr>
+<tr><td>Active params / token</td><td class="num">17B<sup><a href="#s1">1</a></sup></td><td class="num win">6B<sup><a href="#s2">2</a></sup></td><td>Both: 512 experts, 10 routed + 1 shared</td></tr>
+<tr><td>Context</td><td class="num">262,144 native → 1,010,000<sup><a href="#s1">1</a></sup></td><td class="num">262,144 native → 1,000,000<sup><a href="#s2">2</a></sup></td><td>Both extend with YaRN</td></tr>
+<tr><td>Released / licence</td><td>Feb 2026 · Apache 2.0<sup><a href="#s5">5</a></sup></td><td>Aug 2026 · Qwen Community 1.0<sup><a href="#s5">5</a></sup></td><td></td></tr>
+<tr class="sec"><td colspan="4">Knowledge &amp; reasoning <span class="tag t-v">VENDOR</span></td></tr>
+<tr><td>MMLU-Pro</td><td class="num">87.8<sup><a href="#s1">1</a></sup></td><td class="num na">N/A</td><td>Flash Next card doesn't report it</td></tr>
+<tr><td>GPQA (Diamond)</td><td class="num">88.4<sup><a href="#s1">1</a></sup></td><td class="num win">91.7<sup><a href="#s2">2</a></sup></td><td></td></tr>
+<tr><td>HLE (no tools)</td><td class="num">28.7<sup><a href="#s1">1</a></sup></td><td class="num win">35.9<sup><a href="#s2">2</a></sup></td><td>Flash Next's HLE was judged by GPT-4o</td></tr>
+<tr><td>AIME26</td><td class="num">91.3<sup><a href="#s1">1</a></sup></td><td class="num na">N/A</td><td></td></tr>
+<tr><td>IFBench</td><td class="num">76.5<sup><a href="#s1">1</a></sup></td><td class="num win">81.3<sup><a href="#s2">2</a></sup></td><td></td></tr>
+<tr class="sec"><td colspan="4">Coding <span class="tag t-v">VENDOR</span></td></tr>
+<tr><td>LiveCodeBench v6</td><td class="num">83.6<sup><a href="#s1">1</a></sup></td><td class="num win">91.9<sup><a href="#s2">2</a></sup></td><td></td></tr>
+<tr><td>SWE-bench Verified</td><td class="num">76.4<sup><a href="#s1">1</a></sup></td><td class="num na">N/A</td><td>Flash Next reports SWE-bench Pro instead</td></tr>
+<tr><td>SWE-bench Multilingual</td><td class="num">69.3<sup><a href="#s1">1</a></sup></td><td class="num win">81.0<sup><a href="#s2">2</a></sup></td><td>Flash Next: mini-SWE-agent, 256K. 397B's harness isn't stated</td></tr>
+<tr><td>SWE-bench Pro</td><td class="num na">N/A</td><td class="num">62.5<sup><a href="#s2">2</a></sup></td><td>Claude Code harness</td></tr>
+<tr><td>Terminal-Bench 2</td><td class="num">52.5<sup><a href="#s1">1</a></sup></td><td class="num na">N/A</td><td></td></tr>
+<tr class="sec"><td colspan="4">Tool use / agents <span class="tag t-v">VENDOR</span></td></tr>
+<tr><td>BFCL-V4</td><td class="num">72.9<sup><a href="#s1">1</a></sup></td><td class="num na">N/A</td><td></td></tr>
+<tr><td>TAU2-Bench</td><td class="num">86.7<sup><a href="#s1">1</a></sup></td><td class="num na">N/A</td><td></td></tr>
+<tr><td>Toolathlon</td><td class="num">38.3 ("Tool Decathlon")<sup><a href="#s1">1</a></sup></td><td class="num">73.5 ("Toolathlon Verified")<sup><a href="#s2">2</a></sup></td><td>Different benchmark versions, so <b>not comparable</b></td></tr>
+<tr class="sec"><td colspan="4">Long context <span class="tag t-v">VENDOR</span></td></tr>
+<tr><td>AA-LCR (vendor-run)</td><td class="num">68.7<sup><a href="#s1">1</a></sup></td><td class="num na">N/A</td><td></td></tr>
+<tr><td>LongBench v2</td><td class="num">63.2<sup><a href="#s1">1</a></sup></td><td class="num na">N/A</td><td></td></tr>
+<tr><td>RULER</td><td class="num na">N/A</td><td class="num na">N/A</td><td>Neither card reports it</td></tr>
+<tr class="sec"><td colspan="4">Vision (shared rows) <span class="tag t-v">VENDOR</span></td></tr>
+<tr><td>MathVision (no code interpreter)</td><td class="num">88.6<sup><a href="#s1">1</a></sup></td><td class="num win">90.6<sup><a href="#s2">2</a></sup></td><td></td></tr>
+<tr><td>CharXiv (RQ)</td><td class="num">80.8<sup><a href="#s1">1</a></sup></td><td class="num win">84.6 (no CI)<sup><a href="#s2">2</a></sup></td><td></td></tr>
+<tr><td>RealWorldQA</td><td class="num">83.9<sup><a href="#s1">1</a></sup></td><td class="num win">88.5<sup><a href="#s2">2</a></sup></td><td></td></tr>
+<tr><td>AndroidWorld</td><td class="num">66.8<sup><a href="#s1">1</a></sup></td><td class="num win">84.5<sup><a href="#s2">2</a></sup></td><td></td></tr>
+<tr class="sec"><td colspan="4">Independent <span class="tag t-i">INDEP</span></td></tr>
+<tr><td>AA Intelligence Index v4.3.2</td><td class="num">18<sup><a href="#s5">5</a></sup></td><td class="num win">40<sup><a href="#s5">5</a></sup></td><td>Same 10-eval suite. Flash Next ranks #6 of 117 comparable open models<sup><a href="#s6">6</a></sup></td></tr>
+<tr><td>AA-LCR v1.1 (long context)</td><td class="num">77%<sup><a href="#s5">5</a></sup></td><td class="num win">80%<sup><a href="#s5">5</a></sup></td><td></td></tr>
+<tr><td>AA Terminal-Bench 4.0</td><td class="num">0%<sup><a href="#s5">5</a></sup></td><td class="num win">25%<sup><a href="#s5">5</a></sup></td><td></td></tr>
+<tr><td>AA HLE / SciCode</td><td class="num">29% / 45%<sup><a href="#s5">5</a></sup></td><td class="num win">38% / 51%<sup><a href="#s5">5</a></sup></td><td></td></tr>
+<tr><td>AA-Omniscience (hallucination-penalised)</td><td class="num">−31<sup><a href="#s5">5</a></sup></td><td class="num win">−10<sup><a href="#s5">5</a></sup></td><td>Higher is better</td></tr>
+<tr><td>Output tokens per AA task</td><td class="num win">19k<sup><a href="#s5">5</a></sup></td><td class="num">108k<sup><a href="#s5">5</a></sup></td><td>Flash Next is far more verbose</td></tr>
+<tr><td>LMArena Text</td><td class="num">1438 ±3 (#38, 88.7K votes)<sup><a href="#s7">7</a></sup></td><td class="num na">N/A (not listed)</td><td>Snapshot from 2 Oct 2026, via the llm.ing mirror</td></tr>
+<tr class="sec"><td colspan="4">Community quality at the quant you'd actually run <span class="tag t-c">COMMUNITY</span></td></tr>
+<tr><td>397B smol-IQ2_XS (2.46 bpw): lm-eval, no thinking</td><td class="num">MMLU 87.9 · GPQA-D CoT 0-shot 82.3<sup><a href="#s19">19</a></sup></td><td class="num na">N/A</td><td>Different harness from the vendor numbers, so don't subtract</td></tr>
+<tr><td>Flash Next IQ4_NL: Strix Benchmarks suite</td><td class="num na">N/A</td><td class="num">222/285 recorded; Tooling 64/65<sup><a href="#s17">17</a></sup></td><td>Measured on gfx1151</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<h3 style="margin-top:0">Qwen's own head-to-head <span class="tag t-v">VENDOR</span></h3>
+<p>Qwen didn't compare Flash Next with 3.5-397B directly. It compared Flash Next with <b>Qwen3.7-Plus</b>, a newer 397B / 17B-active model. Flash Next still wins: SWE-bench Pro 62.5 vs 55.8, LiveCodeBench v6 91.9 vs 89.6, GPQA-D 91.7 vs 90.3, Toolathlon Verified 73.5 vs 50.6, DeepSWE 58.7 vs 16.5.<sup><a href="#s2">2</a></sup> In the tech report's base-model (pre-instruct) table, Flash Next beats the 397B-A17B base on 8 of 14 tests and trails on the rest by at most 2.6 points (for example MMLU-Pro 73.23 vs 70.90 and GPQA 51.42 vs 51.52).<sup><a href="#s4">4</a></sup> If Flash Next beats the newer 397B, the older 3.5-397B shouldn't be expected to do better.</p>
+</div>
+
+<h2>Does 397B fit on your Strix Halo?</h2>
+<p><b>Only at about 2 bits per weight, and with little room left over.</b> You have about 123 GB usable. One Strix Halo user reported that the GPU memory pool under kernel 6.17 is about 115 GB once you set <code>ttm.pages_limit=30146560</code>. Without it the default is about 56 GB.<sup><a href="#s12">12</a></sup></p>
+<div class="tablewrap">
+<table>
+<thead><tr><th>397B quant</th><th>Size (GB, HF file total)</th><th>Fits ~123 GB?</th><th>Quality signal</th></tr></thead>
+<tbody>
+<tr><td>bartowski IQ1_S / IQ1_M</td><td class="num">88.7 / 98.3<sup><a href="#s10">10</a></sup></td><td>Yes, with room</td><td>Lowest tier. ubergarm IQ1_KT (1.93 bpw) PPL 4.25 vs BF16 3.49 (+22%)<sup><a href="#s11">11</a></sup></td></tr>
+<tr><td>Unsloth UD-IQ1_M</td><td class="num">106.8<sup><a href="#s9">9</a></sup></td><td>Yes</td><td>N/A</td></tr>
+<tr><td>bartowski IQ2_XXS</td><td class="num">113.3<sup><a href="#s10">10</a></sup></td><td>Yes, tight</td><td>N/A</td></tr>
+<tr><td>Unsloth UD-IQ2_XXS</td><td class="num">114.9<sup><a href="#s9">9</a></sup></td><td>Yes, tight (about 107 GB at the time of the Strix run)<sup><a href="#s12">12</a></sup></td><td>N/A</td></tr>
+<tr><td>ubergarm smol-IQ2_KS (ik_llama.cpp)</td><td class="num">116.1<sup><a href="#s11">11</a></sup></td><td>Barely</td><td>PPL 3.92 (+12%)<sup><a href="#s11">11</a></sup></td></tr>
+<tr><td>ubergarm smol-IQ2_XS</td><td class="num">121.8<sup><a href="#s11">11</a></sup></td><td>Practically no</td><td>PPL 3.87 (+11%)<sup><a href="#s11">11</a></sup></td></tr>
+<tr><td>Unsloth UD-IQ2_M</td><td class="num">123.1<sup><a href="#s9">9</a></sup></td><td>No</td><td>N/A</td></tr>
+<tr><td>Smallest Q3: UD-IQ3_XXS / Q3_K_S</td><td class="num">140.3 / 164.3<sup><a href="#s9">9</a></sup></td><td><b>No</b></td><td>ubergarm Q3_K (3.9 bpw) PPL 3.54 (+1.6%), at 180 GiB<sup><a href="#s11">11</a></sup></td></tr>
+<tr><td>EXL3</td><td class="num na">N/A</td><td>No path</td><td>Upstream ExLlamaV3 lists ROCm as a to-do and installs CUDA-only.<sup><a href="#s20">20</a></sup> An AMD fork exists, but I found no 397B results on it</td></tr>
+</tbody>
+</table>
+</div>
+<p><b>KV-cache headroom.</b> 397B's KV cache is small because only 15 of its 60 layers use full attention, with 2 KV heads of dimension 256.<sup><a href="#s1">1</a></sup> The rest are Gated DeltaNet layers with a fixed-size state. <span class="tag t-e">MY ESTIMATE</span> That works out to about 30 KB per token at f16, or about 4 GB at 128K context (about half that with q8_0 KV). This is arithmetic from the model card, not a measurement. So the weights are the problem. A 113–115 GB IQ2 file plus about 4 GB of KV plus compute buffers plus the OS lands right at your ~123 GB ceiling. The one Strix run that fit everything on the GPU used a 4,096-token context.<sup><a href="#s12">12</a></sup></p>
+<p>For comparison, Flash Next is about 94 GB at UD-IQ4_XS and 111 GB at UD-Q4_K_XL.<sup><a href="#s9b">9b</a></sup> One fork keeps its 27 GiB n-gram (engram) table on SSD to free up memory.<sup><a href="#s18">18</a></sup></p>
+
+<h2>Measured speed: Strix Halo and similar 128 GB boxes</h2>
+<div class="tablewrap">
+<table>
+<thead><tr><th>Model · quant · setup</th><th>Prompt processing</th><th>Generation</th><th>Source</th></tr></thead>
+<tbody>
+<tr class="sec"><td colspan="4">Qwen3.5-397B-A17B</td></tr>
+<tr><td>Strix Halo · UD-IQ2_XXS · llama.cpp Vulkan (RADV), 61/61 layers, ctx 4096</td><td class="num">25–33 tok/s</td><td class="num">17–19 tok/s</td><td><span class="tag t-c">COMMUNITY</span><sup><a href="#s12">12</a>,<a href="#s13">13</a></sup></td></tr>
+<tr><td>Strix Halo · IQ2_XXS · HIP on Windows, 33/61 layers</td><td class="num na">N/A</td><td class="num">6.82 tok/s</td><td><span class="tag t-c">COMMUNITY</span><sup><a href="#s13">13</a></sup></td></tr>
+<tr><td>Strix Halo · IQ3_XXS · Vulkan, partial CPU-MoE, 128K ctx</td><td class="num">~30 tok/s</td><td class="num">~6 tok/s</td><td><span class="tag t-c">COMMUNITY</span><sup><a href="#s14">14</a></sup></td></tr>
+<tr><td>DGX Spark 128 GB · UD-TQ1_0 · llama-bench</td><td class="num">462 (pp4096) → 406 @ 40K depth</td><td class="num">19.7 → 17.3 @ 40K</td><td><span class="tag t-c">COMMUNITY</span><sup><a href="#s16">16</a></sup></td></tr>
+<tr><td>Mac M1 Ultra 128 GB · tarruda sub-128 GB GGUF · empty ctx</td><td class="num">~190 tok/s</td><td class="num">~21 tok/s</td><td><span class="tag t-c">COMMUNITY</span><sup><a href="#s14">14</a></sup></td></tr>
+<tr class="sec"><td colspan="4">Qwen3.8-Flash-Next (your current model)</td></tr>
+<tr><td>Strix Halo · UD-Q4_K_XL · llama-bench HIP, stock, no MTP</td><td class="num">412–422 (pp512)</td><td class="num">21.0–21.3 (tg128)</td><td><span class="tag t-c">COMMUNITY</span><sup><a href="#s15">15</a></sup></td></tr>
+<tr><td>Strix Halo · UD-Q2_K_XL · same</td><td class="num">395</td><td class="num">24.3</td><td><span class="tag t-c">COMMUNITY</span><sup><a href="#s15">15</a></sup></td></tr>
+<tr><td>Strix Halo · UD-IQ4_XS · Vulkan tuned, MTP</td><td class="num">510 @ 8K · 390 @ 32K</td><td class="num">~27 without spec; median 33 on real agent chats; up to 55–63 on file rewrites</td><td><span class="tag t-c">COMMUNITY</span><sup><a href="#s16b">16b</a></sup></td></tr>
+<tr><td>Strix Halo · IQ4_NL · custom ROCm + MTP, 128K input</td><td class="num">935 tok/s</td><td class="num">31.7 tok/s</td><td><span class="tag t-c">COMMUNITY</span><sup><a href="#s17">17</a></sup></td></tr>
+</tbody>
+</table>
+</div>
+<p class="note">Why is 397B's prompt processing so slow on Strix? The Reddit run reports 25–33 tok/s on Vulkan with the GPU pool almost full. DGX Spark reaches about 460 tok/s on a smaller 1-bit quant, and Flash Next reaches 400+ on the same chip. That suggests the Strix number is limited by memory pressure and backend issues, not a hard ceiling. Still, it is the only measured all-GPU Strix figure I found. At 30 tok/s, an 18K-token agent prompt takes about 10 minutes before the first output token.</p>
+
+<h2>Caveats</h2>
+<ul>
+<li>Most quality numbers are <b>vendor claims</b>. The cards were published six months apart, with different comparison sets and sometimes different harnesses. The Artificial Analysis comparison is the cleanest like-for-like evidence.</li>
+<li>Artificial Analysis tests the full-precision API models. None of the benchmark numbers reflect a 2-bit 397B. Expect it to do worse locally than its card says.</li>
+<li>LMArena has no Text score for Flash Next yet, so that row stays N/A.</li>
+<li>I didn't find any r/LocalLLaMA run that compares the two models head to head on the same hardware with the same tasks.</li>
+</ul>
+
+<h2>Sources</h2>
+<ol class="src">
+<li id="s1">Qwen3.5-397B-A17B model card (Hugging Face): <a href="https://huggingface.co/Qwen/Qwen3.5-397B-A17B">huggingface.co/Qwen/Qwen3.5-397B-A17B</a></li>
+<li id="s2">Qwen3.8-Flash-Next model card (Hugging Face): <a href="https://huggingface.co/Qwen/Qwen3.8-Flash-Next">huggingface.co/Qwen/Qwen3.8-Flash-Next</a></li>
+<li id="s3">Qwen3.8-Flash-Next GitHub: <a href="https://github.com/QwenLM/Qwen3.8-Flash-Next">github.com/QwenLM/Qwen3.8-Flash-Next</a></li>
+<li id="s4">Tech report, "On the Design of Qwen3.8-Next Architecture" (Table 11, base models): <a href="https://arxiv.org/html/2608.30320">arxiv.org/html/2608.30320</a></li>
+<li id="s5">Artificial Analysis, Flash Next vs Qwen3.5 397B (Reasoning): <a href="https://artificialanalysis.ai/models/comparisons/qwen3-8-flash-next-vs-qwen3-5-397b-a17b">artificialanalysis.ai/…/qwen3-8-flash-next-vs-qwen3-5-397b-a17b</a></li>
+<li id="s6">Artificial Analysis, Flash Next model page: <a href="https://artificialanalysis.ai/models/qwen3-8-flash-next">artificialanalysis.ai/models/qwen3-8-flash-next</a></li>
+<li id="s7">LMArena Text leaderboard mirror (2 Oct 2026 snapshot): <a href="https://llm.ing/benchmarks/lmarena-text">llm.ing/benchmarks/lmarena-text</a></li>
+<li id="s9">Unsloth Qwen3.5-397B-A17B GGUF (sizes from the HF file API): <a href="https://huggingface.co/unsloth/Qwen3.5-397B-A17B-GGUF">huggingface.co/unsloth/Qwen3.5-397B-A17B-GGUF</a></li>
+<li id="s9b">Unsloth Qwen3.8-Flash-Next GGUF: <a href="https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF">huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF</a></li>
+<li id="s10">bartowski Qwen3.5-397B-A17B GGUF: <a href="https://huggingface.co/bartowski/Qwen_Qwen3.5-397B-A17B-GGUF">huggingface.co/bartowski/Qwen_Qwen3.5-397B-A17B-GGUF</a></li>
+<li id="s11">ubergarm Qwen3.5-397B-A17B GGUF (PPL per quant): <a href="https://huggingface.co/ubergarm/Qwen3.5-397B-A17B-GGUF">huggingface.co/ubergarm/Qwen3.5-397B-A17B-GGUF</a></li>
+<li id="s12">r/LocalLLaMA: "Qwen3.5-397B at 17-19 tok/s on a Strix Halo iGPU (Vulkan)": <a href="https://www.reddit.com/r/LocalLLaMA/comments/1s2rtux/qwen35397b_at_1719_toks_on_a_strix_halo_igpu_all/">reddit.com/r/LocalLLaMA/comments/1s2rtux</a></li>
+<li id="s13">thebeedubya/autoresearch (same run, full table): <a href="https://github.com/thebeedubya/autoresearch">github.com/thebeedubya/autoresearch</a></li>
+<li id="s14">tarruda 397B GGUF discussion (Strix IQ3_XXS and M1 Ultra numbers): <a href="https://huggingface.co/tarruda/Qwen3.5-397B-A17B-GGUF/discussions/2">huggingface.co/tarruda/…/discussions/2</a></li>
+<li id="s15">Flash Next on Strix Halo measurements (kksoftwareag): <a href="https://kksoftwareag.github.io/strix-halo-qwen-3.8-flash-next/measurements.html">kksoftwareag.github.io/strix-halo-qwen-3.8-flash-next/measurements.html</a></li>
+<li id="s16">r/LocalLLaMA: "Qwen3.5-397B-A17B-UD-TQ1 bench results FW Desktop Strix Halo" (DGX Spark table in comments): <a href="https://www.reddit.com/r/LocalLLaMA/comments/1rdef9x/qwen35397ba17budtq1_bench_results_fw_desktop/">reddit.com/r/LocalLLaMA/comments/1rdef9x</a></li>
+<li id="s16b">llama.cpp Discussion #28512, Flash Next on Strix Halo, Vulkan: <a href="https://github.com/ggml-org/llama.cpp/discussions/28512">github.com/ggml-org/llama.cpp/discussions/28512</a> · see also #27950 (ROCm + MTP, 16.8 → 47.1 tok/s): <a href="https://github.com/ggml-org/llama.cpp/discussions/27950">github.com/ggml-org/llama.cpp/discussions/27950</a></li>
+<li id="s17">Strix Benchmarks (slb350), Flash-Next recorded result and context sweep: <a href="https://slb350.github.io/strix-benchmarks/models/">slb350.github.io/strix-benchmarks/models/</a></li>
+<li id="s18">EngramHalo.cpp (Flash Next fork, engram table on SSD): <a href="https://github.com/Aristo94/EngramHalo.cpp">github.com/Aristo94/EngramHalo.cpp</a></li>
+<li id="s19">ubergarm discussion #8, lm-eval on smol-IQ2_XS: <a href="https://huggingface.co/ubergarm/Qwen3.5-397B-A17B-GGUF/discussions/8">huggingface.co/ubergarm/…/discussions/8</a></li>
+<li id="s20">ExLlamaV3 README (ROCm to-do, CUDA install): <a href="https://github.com/turboderp-org/exllamav3">github.com/turboderp-org/exllamav3</a></li>
+</ol>
+
+<footer>Built by Grok Bot for Biggles · 9 Oct 2026 (AWST). All numbers come from the linked sources. The only exception is the KV-cache estimate, which is marked as my arithmetic.</footer>
+</main>
+</body>
+</html>
