@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fact-check: "Ubuntu 33% faster than Windows on Strix Halo"</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f6f3;--surface:#fff;--ink:#1a1a1a;--muted:#5c5c5c;--line:rgba(0,0,0,.08);--accent:#c45c26;--ok:#2f7d4f;--warn:#a87412;--bad:#b0362c}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.07rem/1.65 "Source Serif 4",Georgia,serif}
+.top{font:500 .85rem/1.4 "IBM Plex Sans",sans-serif;color:var(--muted);border-bottom:1px solid var(--line);padding:.8rem 1.2rem;background:var(--surface)}
+main{max-width:46rem;margin:0 auto;padding:1.5rem 1.15rem 4rem}
+h1,h2,h3{font-family:"IBM Plex Sans",sans-serif;line-height:1.25}
+h1{font-size:1.75rem;margin:.6rem 0 .4rem}
+h2{font-size:1.3rem;margin:2.6rem 0 .6rem;padding-top:1rem;border-top:1px solid var(--line)}
+h3{font-size:1.05rem;margin:1.6rem 0 .3rem}
+.lede{font-size:1.12rem;color:#333}
+.badges{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 1rem;font:500 .78rem "IBM Plex Sans",sans-serif}
+.badges span{background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:.2rem .65rem;color:var(--muted)}
+.verdict{background:var(--surface);border-left:4px solid var(--accent);padding:1rem 1.1rem;border-radius:6px;margin:1rem 0}
+.verdict b{font-family:"IBM Plex Sans",sans-serif}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(12.5rem,1fr));gap:.7rem;margin:1rem 0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:.85rem .95rem;font:.92rem/1.5 "IBM Plex Sans",sans-serif}
+.card .k{font-size:1.4rem;font-weight:600;display:block}
+.card .l{color:var(--muted)}
+.tw{overflow-x:auto;margin:1rem 0;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font:.85rem/1.45 "IBM Plex Sans",sans-serif}
+th,td{text-align:left;vertical-align:top;padding:.5rem .6rem;border-bottom:1px solid var(--line)}
+th{background:#faf9f6;font-weight:600}
+td{min-width:5.5rem}
+.pill{display:inline-block;font:600 .72rem "IBM Plex Sans",sans-serif;border-radius:4px;padding:.08rem .4rem;white-space:nowrap}
+.ok{background:#e4f1e8;color:var(--ok)}.warn{background:#f6edd9;color:var(--warn)}.bad{background:#f5e1de;color:var(--bad)}.na{background:#ececec;color:#555}
+.bar{display:flex;height:1.6rem;border-radius:4px;overflow:hidden;font:600 .74rem/1.6rem "IBM Plex Sans",sans-serif;color:#fff;margin:.25rem 0 .7rem}
+.bar .p{background:#c45c26;padding-left:.4rem;white-space:nowrap}.bar .d{background:#5b7aa0;padding-left:.4rem;white-space:nowrap}
+.barlabel{font:500 .85rem "IBM Plex Sans",sans-serif;color:var(--muted)}
+.spec{background:#fbf8f1;border:1px dashed #d8c9a8;border-radius:6px;padding:.7rem .9rem;margin:1rem 0;font-size:.98rem}
+.spec b{font-family:"IBM Plex Sans",sans-serif;color:var(--warn)}
+a{color:#9a4415;word-break:break-word}
+ul{padding-left:1.2rem}li{margin:.3rem 0}
+.src li{font:.85rem/1.5 "IBM Plex Sans",sans-serif}
+.small{font:.85rem/1.5 "IBM Plex Sans",sans-serif;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="top">Fact-check · Strix Halo local AI · Windows 11 vs Linux · prepared 11 Oct 2026 (AWST)</div>
+<main>
+<h1>"Ubuntu makes Strix Halo 33% faster than Windows": fact-check</h1>
+<p class="lede">David Hendrickson (<a href="https://x.com/TeksEdge/status/2108754402123428147">@TeksEdge</a>, posted 11:00 AWST Sat 10 Oct 2026) summarised a Hardware Busters retest of the BOSGAME M5. I checked every number against the original article and compared it with other public Strix Halo benchmarks.</p>
+<div class="badges"><span>Verdict: partly true</span><span>Source numbers: all accurate</span><span>General conclusion: overstated</span><span>One model · one machine · 3 runs</span></div>
+
+<div class="verdict"><b>Verdict: partly true.</b> Every number in the post matches the Hardware Busters article (published 06:23 AWST Thu 8 Oct 2026). On the same BOSGAME M5, with Qwen3.8 27.3B Q8 and a 96 GB graphics allocation, a long answer took 37.94 s on Windows 11 and 25.27 s on Ubuntu 26.04.1 with llama.cpp on Vulkan/RADV. That is 33.4% less time, and the first text came 11.3 s sooner. The post goes wrong when it treats this as an OS-only effect and as a general rule. The author himself says that the OS, the graphics driver and the llama.cpp build all changed between runs. He also says he didn't keep every Windows launch setting, and he never says which llama.cpp GPU backend Windows used. Almost all of the gain came from reading the prompt (prefill). Writing speed rose only 9.5% (15.22 to 16.66 tok/s). Other public benchmarks show the Windows-vs-Linux winner flips with driver versions: in Nov 2025, AMD's Windows Vulkan driver beat Linux RADV by about 20% on prefill. On Linux, the ROCm-vs-Vulkan winner also changes with model and build. So "this Windows setup was slower than this Ubuntu setup" is true. "Linux beats Windows on Strix Halo for local LLMs" is a fair bet for prefill on current Mesa, but it is not proven by this test.</div>
+
+<div class="cards">
+<div class="card"><span class="k">37.94 s → 25.27 s</span><span class="l">Long ~6.3K-token prompt, full answer (Windows → Ubuntu Vulkan)</span></div>
+<div class="card"><span class="k">26.77 s → 15.47 s</span><span class="l">Time to first text. This accounts for 11.3 of the 12.67 s saved</span></div>
+<div class="card"><span class="k">+9.5%</span><span class="l">Generation speed, 15.22 → 16.66 tok/s. A small part of the gain</span></div>
+<div class="card"><span class="k">Not stated</span><span class="l">The llama.cpp backend, build and context length used on Windows</span></div>
+</div>
+
+<h2>1. Claim vs what Hardware Busters actually says</h2>
+<p>Original article: <a href="https://hwbusters.com/systems/bosgame-m5-ubuntu-ai-performance-windows-11/">hwbusters.com/systems/bosgame-m5-ubuntu-ai-performance-windows-11/</a> (results on <a href="https://hwbusters.com/systems/bosgame-m5-ubuntu-ai-performance-windows-11/2/">page 2</a>, memory on <a href="https://hwbusters.com/systems/bosgame-m5-ubuntu-ai-performance-windows-11/4/">page 4</a>). The Windows numbers are reused from the 25 Sep 2026 review: <a href="https://hwbusters.com/systems/bosgame-m5-ai-pc-review-strix-halo-vs-asus-gx10/4/">review page 4</a>.</p>
+<div class="tw"><table>
+<tr><th>Post says</th><th>Hardware Busters says</th><th>Check</th></tr>
+<tr><td>Same BOSGAME M5 retested</td><td>"This is the M5 from my original review"</td><td><span class="pill ok">Matches</span></td></tr>
+<tr><td>Ryzen AI Max+ 395, 128 GB unified, 96 GB graphics allocation</td><td>Same chip and 128 GB. 96 GB set in BIOS on both OSes. Ubuntu then sees 30.47 GiB</td><td><span class="pill ok">Matches</span></td></tr>
+<tr><td>Same Qwen3.8 model</td><td>Qwen3.8 27.3B Q8 on Ubuntu. "Qwen3.8-27B Q8" on Windows. Same benchmark script, both with MTP</td><td><span class="pill ok">Matches</span></td></tr>
+<tr><td>Windows 37.94 s, Ubuntu 25.27 s</td><td>Exact. The 25.27 s is <b>Ubuntu Vulkan</b>. Ubuntu HIP/ROCm took 27.92 s</td><td><span class="pill ok">Matches</span> <span class="pill warn">Best backend only</span></td></tr>
+<tr><td>About 33% less time</td><td>"33.38% less time" (12.67 / 37.94 = 33.4%)</td><td><span class="pill ok">Matches</span></td></tr>
+<tr><td>First text about 11 s sooner</td><td>26.77 s → 15.47 s on the long prompt (11.30 s)</td><td><span class="pill ok">Matches</span></td></tr>
+<tr><td>Ubuntu 26.04.1, llama.cpp with Mesa/RADV Vulkan and ROCm</td><td>Ubuntu 26.04.1, kernel 7.0.0-38, Mesa/RADV 26.0.8, llama.cpp b11475 Vulkan and HIP builds, ROCm 10.1 userspace</td><td><span class="pill ok">Matches</span></td></tr>
+<tr><td>"33% less time just by changing the software/OS stack" / "Same Qwen3.8 but OS…"</td><td>"The OS, the graphics driver, and the llama.cpp build all changed… the original review didn't keep every Windows launch setting. So this is my Windows setup against my Ubuntu setup"</td><td><span class="pill warn">Overstated</span>: not an OS-only A/B</td></tr>
+<tr><td>"A pretty big deal for anyone buying these 128GB Strix Halo boxes"</td><td>One dense model, 8K context (Ubuntu), three runs per case, 256-token cap. The author still plans 64K-context and concurrency tests</td><td><span class="pill warn">Generalised</span> from a narrow test</td></tr>
+</table></div>
+
+<h2>2. What ran on each OS</h2>
+<div class="tw"><table>
+<tr><th>Item</th><th>Windows 11 (review, 25 Sep 2026)</th><th>Ubuntu (retest, 8 Oct 2026)</th></tr>
+<tr><td>OS / driver</td><td>Windows 11 Pro build 26200, AMD Software 26.8.1, chipset 8.08.12.551</td><td>Ubuntu 26.04.1, kernel 7.0.0-38, Xfce, Mesa/RADV 26.0.8</td></tr>
+<tr><td>Engine</td><td>"A GPU-backed llama.cpp build", a model router and MTP, behind an OpenAI-compatible endpoint</td><td>llama.cpp b11475 with MTP</td></tr>
+<tr><td>GPU backend</td><td><b>Not stated</b> (Vulkan vs HIP isn't said). LM Studio, Lemonade, DirectML and ROCm-for-Windows are not mentioned</td><td>Vulkan (RADV) and HIP/ROCm (ROCm 10.1 gfx1151 userspace, binary built against ROCm 10.0). Both tested</td></tr>
+<tr><td>llama.cpp build</td><td><b>Not stated</b> (author says builds differ)</td><td>b11475</td></tr>
+<tr><td>Model / quant</td><td>Qwen3.8-27B, Q8</td><td>Qwen3.8 27.3B, Q8</td></tr>
+<tr><td>Context length</td><td><b>Not stated</b></td><td>8,192 tokens in every test</td></tr>
+<tr><td>Prompt length</td><td>48 (short) and 6,303 / 6,303 / 6,319 tokens (long, uncached)</td><td>Same script and token counts</td></tr>
+<tr><td>Output</td><td>Max 256 tokens, temp 0, seed 42, no reasoning. Long answers were 158 / 175 / 165 tokens</td><td>Same settings. Vulkan answers were 157 / 169 / 164 tokens, HIP 163 / 175 / 176</td></tr>
+<tr><td>GPU memory allocation</td><td>96 GB iGPU (BIOS), about 32 GB left for Windows</td><td>96 GB (BIOS). Peak GPU use 27.85 GiB (Vulkan) / 28.23 GiB (HIP), peak GTT 1.48 GiB, no swap</td></tr>
+<tr><td>Runs</td><td>Median of 3</td><td>Median of 3 (Qwen3.8), median of 5 (30B-A3B chat test)</td></tr>
+</table></div>
+<p class="small">Note: the model used only about 28 GiB of GPU memory. So the 96 GB Windows cap versus larger Linux GTT limits played <b>no part</b> in this result.</p>
+
+<h3>Where the 12.67 seconds went</h3>
+<p>Total time is roughly the time to first text (prefill plus overhead) plus the number of output tokens divided by the generation speed. On the long prompt:</p>
+<div class="barlabel">Windows 11: 37.94 s</div>
+<div class="bar"><div class="p" style="width:70.6%">first text 26.77 s</div><div class="d" style="width:29.4%">writing 11.17 s</div></div>
+<div class="barlabel">Ubuntu Vulkan: 25.27 s</div>
+<div class="bar" style="width:66.6%"><div class="p" style="width:61.2%">first text 15.47 s</div><div class="d" style="width:38.8%">9.80 s</div></div>
+<p>About 89% of the saving (11.30 of 12.67 s) came before the first word. As a rough rate (my arithmetic, which includes server overhead), about 6,303 tokens / 26.77 s ≈ 235 tok/s of prefill on Windows, against ≈ 407 tok/s on Ubuntu Vulkan. Generation rose only 15.22 → 16.66 tok/s. A short-prompt, long-answer workload would therefore show a much smaller gap than 33%.</p>
+
+<h2>3. What other public benchmarks show</h2>
+<p>pp = prompt processing (prefill), tg = token generation (decode), both in tokens/s. Higher is better.</p>
+<h3>Windows vs Linux</h3>
+<div class="tw"><table>
+<tr><th>Source · date</th><th>Setup</th><th>Prefill</th><th>Decode</th></tr>
+<tr><td>r/LocalLLaMA, "Windows llama.cpp is 20% faster", ~14 Nov 2025 · <a href="https://www.reddit.com/r/LocalLLaMA/comments/1owskm6/windows_llamacpp_is_20_faster/">link</a></td><td>Strix Halo, Qwen3-VL-30B-A3B, Vulkan: AMD Windows driver vs RADV</td><td>Windows ahead: pp512 1079 vs 877, pp4096 807 vs 687 (figures come from a search-index excerpt, because Reddit blocked my fetch. A <a href="https://news.smol.ai/frozen-issues/25-11-14-not-much.html">smol.ai recap</a> confirms Windows led pp512 to pp4096 and credits bf16 support)</td><td>Not found</td></tr>
+<tr><td>Phoronix, 17 Sep 2025 · <a href="https://www.phoronix.com/review/llama-cpp-windows-linux/2">link</a></td><td>RX 9070 XT, <b>not Strix Halo</b>. llama.cpp Vulkan, Win11 + Radeon 25.8.1 vs Ubuntu</td><td>Windows far ahead of Mesa 25.0. Mesa 25.3-devel + Linux 6.17 "match or outperform" (charts only)</td><td>"Quite comparable"</td></tr>
+<tr><td>Phoronix, 16 May 2025 · <a href="https://www.phoronix.com/review/amd-strix-halo-windows-linux/9">link</a></td><td>HP ZBook Ultra G1a (Strix Halo), Win11 vs Ubuntu 25.04. No LLM tests</td><td colspan="2">Ubuntu faster in 80% of ~150 tests, about 30% geomean. Vulkan compute was a "robust battle" (<a href="https://www.phoronix.com/review/amd-strix-halo-windows-linux/4">p4</a>)</td></tr>
+<tr><td>Hardware Busters, 8 Oct 2026</td><td>BOSGAME M5, Qwen3.8 27B Q8, server timing</td><td>TTFT 26.77 → 15.47 s (long)</td><td>15.22 → 16.66 tok/s</td></tr>
+</table></div>
+<p class="small">Not found: an independent same-machine Strix Halo Windows-vs-Linux llama-bench with matched builds that reports both pp and tg. Not found: Lemonade Windows-vs-Linux numbers.</p>
+
+<h3>ROCm vs Vulkan on Linux (Strix Halo)</h3>
+<div class="tw"><table>
+<tr><th>Source · date</th><th>Model / build</th><th>pp (ROCm vs Vulkan)</th><th>tg (ROCm vs Vulkan)</th></tr>
+<tr><td>How Quant, 24 Aug 2026 (upd. 16 Sep) · <a href="https://howquant.dev/benchmarks/strix-halo-rocm-vs-vulkan/">link</a></td><td><b>Qwen3.8-27B Q8_0</b>, b10603, ROCm 7.14 vs RADV Mesa 26.1.7</td><td>pp512 341.3 vs 278.8. pp8192 303.6 vs 254.2 (ROCm about 20% ahead)</td><td>7.76 vs 7.77 (tie). With MTP: 15.67 vs 13.19</td></tr>
+<tr><td>How Quant (same)</td><td>Qwen3.6-35B-A3B Q8_0</td><td>pp512 1091.0 vs 1049.7</td><td>47.47 vs <b>54.22</b></td></tr>
+<tr><td>Soothill, 3 Aug 2026 · <a href="https://www.soothill.io/blog/2026/08/03/llamacpp-vulkan-vs-rocm-strix-halo/">link</a></td><td>Qwen3-Coder-30B-A3B Q4_K_S. ROCm b10085 vs Vulkan b10216</td><td>1344.65 vs 1115.30</td><td>73.65 vs <b>97.73</b></td></tr>
+<tr><td>Soothill (same)</td><td>Qwen3.5-122B-A10B Q4_K_XL</td><td>pp512 339.9 vs 285.0. pp4096 523.0 vs 374.3</td><td>21.3 vs 22.9</td></tr>
+<tr><td>Level1Techs (apkallu), 2 May 2026 · <a href="https://forum.level1techs.com/t/strix-halo-llm-inference-notes/249466">link</a></td><td>Qwen3.5 27B Q8_0, Fedora 44</td><td>343.34 vs 242.34</td><td>7.66 vs 7.84</td></tr>
+<tr><td>Level1Techs (same)</td><td>Qwen3.6 35B-A3B Q8_0 / gpt-oss-120b</td><td>1013.72 vs 1047.41 / 661.73 vs 515.47</td><td>44.58 vs 53.48 / 35.48 vs 36.46</td></tr>
+<tr><td>llama.cpp Discussion #20856, update ~23 Jul 2026 · <a href="https://github.com/ggml-org/llama.cpp/discussions/20856">link</a></td><td>b9870, model not restated in the update</td><td>~830 vs ~558</td><td>~59 vs <b>~80</b></td></tr>
+<tr><td>Hardware Busters, 8 Oct 2026</td><td><b>Qwen3.8 27.3B Q8</b>, b11475, ROCm 10.1 vs RADV 26.0.8</td><td>Long TTFT 17.27 vs 15.47 s (<b>Vulkan</b> ahead). 30B-A3B: 1,499.36 vs 1,649.17</td><td>16.01 vs 16.66 (MTP). 30B-A3B: 51.20 vs 54.41</td></tr>
+<tr><td>Phoronix, 5 Oct 2026 · <a href="https://www.phoronix.com/review/lemonade-vulkan-rocm/2">link</a></td><td>Framework Desktop, Lemonade 2026.39.1 (b10825), Qwen3 14B, Qwen3.5 4B</td><td>ROCm lower time-to-first-token</td><td>Vulkan higher tok/s (charts only)</td></tr>
+</table></div>
+<p>Note the clash. On the <b>same model family</b> (Qwen3.8-27B Q8), How Quant measured ROCm about 20% faster at prefill, while Hardware Busters measured Vulkan faster. Their builds and ROCm versions differ. That alone tells you backend results on gfx1151 depend heavily on the build, not just the OS.</p>
+
+<h3>RADV vs AMDVLK (both Linux Vulkan drivers)</h3>
+<div class="tw"><table>
+<tr><th>Source · date</th><th>Model</th><th>pp512 (AMDVLK vs RADV)</th><th>tg128 (AMDVLK vs RADV)</th></tr>
+<tr><td>kyuz0 toolboxes, 14 Nov 2025 · <a href="https://kyuz0.github.io/amd-strix-halo-toolboxes/">grid</a> · <a href="https://github.com/kyuz0/amd-strix-halo-toolboxes/blob/765cc5c7/docs/benchmarks.md">summary</a></td><td>Many models, b7034, Fedora 42</td><td>AMDVLK won 12 of 16 head-to-heads</td><td>RADV won 11 of 16. RADV took the most first places for tg overall</td></tr>
+<tr><td>Strix Halo Wiki (date not stated) · <a href="https://strixhalo.wiki/AI/llamacpp-performance">link</a></td><td>Qwen3 30B-A3B UD-Q4_K_XL</td><td>741.60 vs 755.14. At 130K depth: 10.75 vs 17.24</td><td>81.79 vs 85.11. At 130K depth: 3.51 vs 12.54</td></tr>
+<tr><td>Strix Benchmarks (slb350, date not stated) · <a href="https://slb350.github.io/strix-benchmarks/">link</a></td><td>Agents-A1 (35B-A3B Q8_0)</td><td>723.54 vs 1010.49 (ROCm 1064.77)</td><td>53.48 vs 53.79 (ROCm 38.15)</td></tr>
+</table></div>
+<p class="small">The AMD proprietary Windows Vulkan driver appears only in the Nov 2025 Reddit thread above. I found no newer matched Strix Halo numbers for it.</p>
+
+<h2>4. Why gaps like this appear</h2>
+<ul>
+<li><b>Different Vulkan drivers.</b> Windows uses AMD's own driver inside AMD Software. Linux uses Mesa RADV. Their speeds move with each release. RADV prefill trailed Windows on Mesa 25.0 and caught up by Mesa 25.3-devel (<a href="https://www.phoronix.com/review/llama-cpp-windows-linux/2">Phoronix, Sep 2025</a>). In Nov 2025, Windows led on Strix Halo partly because its driver exposed bf16 and RADV didn't (<a href="https://news.smol.ai/frozen-issues/25-11-14-not-much.html">recap</a>). RADV got substantially faster again on Ubuntu 26.04 (<a href="https://www.phoronix.com/review/ubuntu-2604-strix-halo/4">Phoronix, 2 Apr 2026</a>).</li>
+<li><b>Memory allocation.</b> On Windows the iGPU gets a fixed BIOS carve-out (96 GB max on these boxes). At 96 GB, AMD's Windows driver split it into 32 + 64 GB Vulkan heaps, and llama.cpp at first saw only 32 GB (<a href="https://github.com/ggml-org/llama.cpp/issues/16832">issue #16832</a>, Oct 2025, fixed by PR #17110). On Linux the GPU can also borrow system RAM through GTT, raised with <code>ttm.pages_limit</code> / <code>ttm.page_pool_size</code>. Jeff Geerling reached about 108 GB and notes that <code>amdgpu.gttsize</code> is deprecated (<a href="https://www.jeffgeerling.com/blog/2025/increasing-vram-allocation-on-amd-ai-apus-under-linux/">8 Aug 2025</a>). This decides which big models fit, but it <b>wasn't a factor here</b> (about 28 GiB used).</li>
+<li><b>Backend maturity on gfx1151.</b> Early HIP prefill was poor until <code>ROCBLAS_USE_HIPBLASLT=1</code> (<a href="https://github.com/ggml-org/llama.cpp/issues/13565">issue #13565</a>, May 2025). rocWMMA flash attention helps at long context (<a href="https://github.com/kyuz0/amd-strix-halo-toolboxes/blob/765cc5c7/README.md">kyuz0</a>). ROCm 7.x failed in 14 of 14 configurations on this exact Bosgame board (<a href="https://thefrontierlab.ai/rocm-7-x-on-the-bosgame-m5-14-configurations-14-failures/">Frontier Lab, May 2026</a>). Lemonade's docs list both ROCm and Vulkan on Windows and Linux, and tell Ryzen AI iGPU users to try ROCm first with Vulkan as a fallback (<a href="https://lemonade-server.ai/docs/guide/configuration/llamacpp/">docs</a>). Measured results often favour Vulkan anyway.</li>
+<li><b>Different llama.cpp builds.</b> Hardware Busters changed the build between runs and doesn't name the Windows one. llama.cpp ships many builds a week, and single PRs have moved gfx1151 prefill by 19–35% (<a href="https://strix-benchmarks.vercel.app/">Strix Benchmarks</a>, PR #21344).</li>
+<li><b>Prefill and decode are bound by different things.</b> Prefill is compute-heavy and very sensitive to kernels and drivers. Decode is mostly limited by memory bandwidth, which is the same hardware on both OSes. A long-prompt test magnifies driver differences. That is why the total fell 33% while decode rose only 9.5%.</li>
+</ul>
+<div class="spec"><b>Speculation:</b> the Windows short-prompt first-text time of 2.57 s for only 48 tokens (vs 0.315 s on Ubuntu) looks more like fixed per-request overhead in the Windows router, driver or settings than slow compute. The article gives no breakdown, so this is unconfirmed.</div>
+
+<h2>5. What it means for your Linux Strix Halo box</h2>
+<p>You're already on the faster side of this test, so nothing here speeds your box up. The real levers are a current kernel, Mesa and llama.cpp build, and testing <b>both</b> RADV and ROCm per model. Public results lean ROCm for dense-model prefill and RADV for MoE decode, but builds flip this. Turn on MTP where the model supports it, and raise GTT via <code>ttm.pages_limit</code> only if you need more than the BIOS carve-out.</p>
+
+<h2>6. Not found / unverified</h2>
+<ul>
+<li>The Windows llama.cpp GPU backend (Vulkan or HIP), build number, context length and launch flags. The author says he didn't keep all of them.</li>
+<li>A Hardware Busters YouTube video of this retest. I found only a Tech4K summary page (<a href="https://tech4k.net/video/bosgame-m5-on-ubuntu-vs-windows-11-33-faster-local-ai-ryzen-ai-max-395-4k785g">link</a>), not the original channel upload.</li>
+<li>The full Reddit thread text (blocked to my fetcher). Its numbers come from a search excerpt plus the smol.ai recap.</li>
+<li>Exact Phoronix chart values (they're images). I quote only Phoronix's written conclusions.</li>
+<li>Newer (2026) matched Strix Halo numbers for AMD's Windows Vulkan driver, ROCm-on-Windows, DirectML or LM Studio.</li>
+</ul>
+
+<h2>Sources</h2>
+<ul class="src">
+<li>X post, @TeksEdge, 10 Oct 2026 03:00 UTC (11:00 AWST): https://x.com/TeksEdge/status/2108754402123428147</li>
+<li>Hardware Busters retest, 8 Oct 2026: https://hwbusters.com/systems/bosgame-m5-ubuntu-ai-performance-windows-11/ (pages /2/ and /4/)</li>
+<li>Hardware Busters original review, 25 Sep 2026: https://hwbusters.com/systems/bosgame-m5-ai-pc-review-strix-halo-vs-asus-gx10/3/ and /4/</li>
+<li>How Quant: https://howquant.dev/benchmarks/strix-halo-rocm-vs-vulkan/</li>
+<li>Soothill: https://www.soothill.io/blog/2026/08/03/llamacpp-vulkan-vs-rocm-strix-halo/</li>
+<li>Level1Techs: https://forum.level1techs.com/t/strix-halo-llm-inference-notes/249466</li>
+<li>llama.cpp #20856: https://github.com/ggml-org/llama.cpp/discussions/20856 · #16832: https://github.com/ggml-org/llama.cpp/issues/16832 · #13565: https://github.com/ggml-org/llama.cpp/issues/13565</li>
+<li>kyuz0: https://kyuz0.github.io/amd-strix-halo-toolboxes/ · https://github.com/kyuz0/amd-strix-halo-toolboxes/blob/765cc5c7/docs/benchmarks.md</li>
+<li>Strix Halo Wiki: https://strixhalo.wiki/AI/llamacpp-performance · Strix Benchmarks: https://slb350.github.io/strix-benchmarks/ · https://strix-benchmarks.vercel.app/</li>
+<li>Phoronix: https://www.phoronix.com/review/llama-cpp-windows-linux/2 · https://www.phoronix.com/review/amd-strix-halo-windows-linux/9 · https://www.phoronix.com/review/ubuntu-2604-strix-halo/4 · https://www.phoronix.com/review/lemonade-vulkan-rocm/2</li>
+<li>Reddit: https://www.reddit.com/r/LocalLLaMA/comments/1owskm6/windows_llamacpp_is_20_faster/ · recap: https://news.smol.ai/frozen-issues/25-11-14-not-much.html</li>
+<li>Lemonade docs: https://lemonade-server.ai/docs/guide/configuration/llamacpp/ · Jeff Geerling: https://www.jeffgeerling.com/blog/2025/increasing-vram-allocation-on-amd-ai-apus-under-linux/ · Frontier Lab: https://thefrontierlab.ai/rocm-7-x-on-the-bosgame-m5-14-configurations-14-failures/</li>
+</ul>
+<p class="small">All times AWST (UTC+8). Research only. Numbers are quoted from the linked sources. Derived figures (shares of time saved, implied prefill rates) are my arithmetic and labelled as such.</p>
+</main>
+</body>
+</html>
